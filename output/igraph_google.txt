@@ -1,0 +1,86 @@
+Profiling dataset web-Google.txt
+Profiling loading
+=================
+
+         703 function calls in 550.518 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.694    0.694  550.518  550.518 <string>:1(<module>)
+      100    0.001    0.000  549.824    5.498 __init__.py:2190(Read)
+      100    0.001    0.000    0.001    0.000 _bootlocale.py:33(getpreferredencoding)
+      100    0.000    0.000    0.000    0.000 codecs.py:260(__init__)
+      100    0.000    0.000    0.000    0.000 codecs.py:309(__init__)
+      100  549.820    5.498  549.822    5.498 {built-in method Read_Edgelist}
+      100    0.001    0.000    0.001    0.000 {built-in method _locale.nl_langinfo}
+        1    0.000    0.000  550.518  550.518 {built-in method builtins.exec}
+      100    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling shortest path
+=======================
+
+         203 function calls in 69.439 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   69.439   69.439 {built-in method builtins.exec}
+        1    0.815    0.815   69.439   69.439 <string>:1(<module>)
+      100   68.624    0.686   68.624    0.686 {method 'shortest_paths' of 'igraph.Graph' objects}
+      100    0.001    0.000    0.001    0.000 __init__.py:2495(vs)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling PageRank
+==================
+
+         203 function calls in 523.830 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  523.830  523.830 {built-in method builtins.exec}
+        1    0.953    0.953  523.830  523.830 <string>:1(<module>)
+      100    0.001    0.000  522.877    5.229 __init__.py:795(pagerank)
+      100  522.876    5.229  522.876    5.229 {method 'personalized_pagerank' of 'igraph.Graph' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling k-core
+================
+
+         103 function calls in 167.758 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  167.758  167.758 {built-in method builtins.exec}
+        1    0.142    0.142  167.758  167.758 <string>:1(<module>)
+      100  167.616    1.676  167.616    1.676 {method 'coreness' of 'igraph.Graph' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling strongly connected components
+=======================================
+
+         91643703 function calls in 222.915 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  222.915  222.915 {built-in method builtins.exec}
+        1    1.099    1.099  222.914  222.914 <string>:1(<module>)
+      100    0.471    0.005  221.815    2.218 __init__.py:469(clusters)
+      100  204.310    2.043  204.310    2.043 {function Graph.clusters at 0x7f398391e400}
+      100    0.002    0.000   17.035    0.170 clustering.py:234(__init__)
+      100    0.477    0.005   17.033    0.170 clustering.py:83(__init__)
+      100    8.949    0.089   16.555    0.166 {built-in method builtins.max}
+ 91642900    7.606    0.000    7.606    0.000 clustering.py:92(<genexpr>)
+      200    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+      100    0.000    0.000    0.000    0.000 {method 'vcount' of 'igraph.Graph' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

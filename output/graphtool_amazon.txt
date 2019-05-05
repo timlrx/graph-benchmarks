@@ -1,0 +1,361 @@
+Profiling dataset amazon0302.txt
+Profiling loading
+=================
+
+         741364997 function calls (741364797 primitive calls) in 499.575 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    8.391    8.391  499.575  499.575 <string>:1(<module>)
+      100    0.000    0.000    0.000    0.000 <string>:1(__new__)
+      100    0.001    0.000    0.001    0.000 __init__.py:1323(__init__)
+      100    0.001    0.000    0.562    0.006 __init__.py:1327(__setitem__)
+      100    0.000    0.000    0.000    0.000 __init__.py:1340(__set_property)
+      300    0.001    0.000    0.001    0.000 __init__.py:1376(__init__)
+      200    0.000    0.000    0.000    0.000 __init__.py:140(_to_str)
+      100    0.001    0.000    0.565    0.006 __init__.py:1403(__setitem__)
+      100    0.001    0.000    0.566    0.006 __init__.py:1502(__setattr__)
+      100    0.005    0.000    0.014    0.000 __init__.py:1544(__init__)
+      100    0.001    0.000    0.002    0.000 __init__.py:166(_prop)
+      100  253.551    2.536  489.753    4.898 __init__.py:2079(add_edge_list)
+      400    0.001    0.000    0.002    0.000 __init__.py:208(_type_alias)
+      100    0.000    0.000    0.000    0.000 __init__.py:2105(<listcomp>)
+      100    0.000    0.000    0.000    0.000 __init__.py:2106(<listcomp>)
+123487800  136.381    0.000  137.086    0.000 __init__.py:2108(wrap)
+370463100   81.617    0.000   99.109    0.000 __init__.py:2110(<genexpr>)
+      100    0.000    0.000    0.000    0.000 __init__.py:2171(<lambda>)
+      100    0.003    0.000    0.005    0.000 __init__.py:2308(new_vertex_property)
+      300    0.001    0.000    0.002    0.000 __init__.py:231(_python_type)
+      100    0.001    0.000    0.001    0.000 __init__.py:2577(set_directed)
+      300    0.001    0.000    0.002    0.000 __init__.py:270(_converter)
+      100    0.000    0.000    0.000    0.000 __init__.py:2868(num_vertices)
+      700    0.000    0.000    0.000    0.000 __init__.py:2922(__get_base)
+      100    0.007    0.000  491.181    4.912 __init__.py:2949(load_graph_from_csv)
+      100    0.000    0.000    0.000    0.000 __init__.py:3032(<listcomp>)
+      200    0.001    0.000    0.001    0.000 __init__.py:3183(value_types)
+      300    0.002    0.000    0.007    0.000 __init__.py:383(__init__)
+      100    0.001    0.000    0.001    0.000 __init__.py:393(_get_any)
+      300    0.001    0.000    0.001    0.000 __init__.py:428(__register_map)
+      297    0.002    0.000    0.002    0.000 __init__.py:433(__unregister_map)
+      297    0.001    0.000    0.003    0.000 __init__.py:438(__del__)
+      300    0.000    0.000    0.000    0.000 __init__.py:541(get_graph)
+      300    0.000    0.000    0.000    0.000 __init__.py:548(key_type)
+      300    0.002    0.000    0.002    0.000 __init__.py:552(value_type)
+      100    0.000    0.000    0.000    0.000 __init__.py:811(reserve)
+      100    0.001    0.000    0.002    0.000 _bootlocale.py:33(getpreferredencoding)
+      100    0.000    0.000    0.000    0.000 codecs.py:260(__init__)
+      100    0.000    0.000    0.001    0.000 codecs.py:309(__init__)
+   210600    0.347    0.000    0.839    0.000 codecs.py:319(decode)
+      100    0.002    0.000    0.561    0.006 decorators.py:1(__set_property)
+      100    0.000    0.000    0.564    0.006 decorators.py:1(__setitem__)
+  300/100    0.001    0.000    0.563    0.006 decorators.py:126(wrapper)
+      100    0.002    0.000    0.559    0.006 decorators.py:95(wrap)
+      100    0.000    0.000    0.000    0.000 decorators.py:99(<listcomp>)
+      400    0.001    0.000    0.001    0.000 enum.py:284(__call__)
+      400    0.000    0.000    0.000    0.000 enum.py:526(__new__)
+      100    0.002    0.000    0.556    0.006 inspect.py:1056(getargspec)
+      100    0.003    0.000    0.016    0.000 inspect.py:1089(getfullargspec)
+      200    0.000    0.000    0.000    0.000 inspect.py:158(isfunction)
+      100    0.004    0.000    0.009    0.000 inspect.py:2117(_signature_from_function)
+      100    0.002    0.000    0.012    0.000 inspect.py:2198(_signature_from_callable)
+      400    0.002    0.000    0.003    0.000 inspect.py:2467(__init__)
+      800    0.000    0.000    0.000    0.000 inspect.py:2517(name)
+      400    0.000    0.000    0.000    0.000 inspect.py:2521(default)
+      400    0.000    0.000    0.000    0.000 inspect.py:2525(annotation)
+      400    0.000    0.000    0.000    0.000 inspect.py:2529(kind)
+      100    0.001    0.000    0.002    0.000 inspect.py:2750(__init__)
+      500    0.000    0.000    0.001    0.000 inspect.py:2799(<genexpr>)
+      100    0.000    0.000    0.000    0.000 inspect.py:2835(parameters)
+      100    0.000    0.000    0.000    0.000 inspect.py:2839(return_annotation)
+      200    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x555e9cec43c0}
+   210600    0.492    0.000    0.492    0.000 {built-in method _codecs.utf_8_decode}
+      100    0.001    0.000    0.001    0.000 {built-in method _csv.reader}
+      100    0.001    0.000    0.001    0.000 {built-in method _locale.nl_langinfo}
+      100    0.538    0.005    0.538    0.005 {built-in method _warnings.warn}
+      100    0.000    0.000    0.000    0.000 {built-in method builtins.callable}
+        1    0.000    0.000  499.575  499.575 {built-in method builtins.exec}
+      600    0.000    0.000    0.000    0.000 {built-in method builtins.id}
+     1500    0.001    0.000    0.001    0.000 {built-in method builtins.isinstance}
+246975700   17.492    0.000   17.492    0.000 {built-in method builtins.len}
+      100    0.558    0.006    0.692    0.007 {built-in method builtins.next}
+      100    0.146    0.001    0.148    0.001 {built-in method io.open}
+      800    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+      300    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+      500    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+      400    0.000    0.000    0.000    0.000 {method 'isidentifier' of 'str' objects}
+      100    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+      100    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+      100    0.000    0.000    0.000    0.000 {method 'values' of 'mappingproxy' objects}
+
+
+Profiling 2-hops
+================
+
+         25013 function calls (24847 primitive calls) in 0.680 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.680    0.680 {built-in method builtins.exec}
+        1    0.001    0.001    0.680    0.680 <string>:1(<module>)
+      100    0.252    0.003    0.597    0.006 __init__.py:1591(shortest_distance)
+      100    0.000    0.000    0.320    0.003 decorators.py:1(copy_property)
+  200/100    0.001    0.000    0.320    0.003 decorators.py:126(wrapper)
+      100    0.282    0.003    0.317    0.003 __init__.py:2367(copy_property)
+      100    0.082    0.001    0.082    0.001 __init__.py:1768(vertex)
+      700    0.002    0.000    0.026    0.000 __init__.py:166(_prop)
+      600    0.002    0.000    0.024    0.000 __init__.py:393(_get_any)
+      600    0.021    0.000    0.021    0.000 __init__.py:811(reserve)
+      200    0.002    0.000    0.010    0.000 __init__.py:3093(__init__)
+      300    0.000    0.000    0.009    0.000 __init__.py:560(get_array)
+      300    0.007    0.000    0.009    0.000 __init__.py:582(_get_data)
+      100    0.000    0.000    0.007    0.000 __init__.py:662(<lambda>)
+      100    0.006    0.000    0.007    0.000 __init__.py:615(__get_set_f_array)
+      200    0.002    0.000    0.006    0.000 __init__.py:2308(new_vertex_property)
+      200    0.002    0.000    0.006    0.000 __init__.py:1544(__init__)
+      600    0.002    0.000    0.006    0.000 __init__.py:383(__init__)
+      100    0.000    0.000    0.003    0.000 __init__.py:2293(new_property)
+      800    0.001    0.000    0.002    0.000 __init__.py:208(_type_alias)
+      600    0.001    0.000    0.002    0.000 __init__.py:270(_converter)
+      600    0.000    0.000    0.002    0.000 __init__.py:438(__del__)
+      600    0.000    0.000    0.001    0.000 __init__.py:231(_python_type)
+      600    0.001    0.000    0.001    0.000 __init__.py:433(__unregister_map)
+      300    0.001    0.000    0.001    0.000 __init__.py:914(__new__)
+      600    0.001    0.000    0.001    0.000 __init__.py:428(__register_map)
+      400    0.001    0.000    0.001    0.000 {built-in method numpy.array}
+     1100    0.001    0.000    0.001    0.000 {built-in method builtins.isinstance}
+      400    0.001    0.000    0.001    0.000 __init__.py:3183(value_types)
+      700    0.001    0.000    0.001    0.000 __init__.py:552(value_type)
+      100    0.000    0.000    0.001    0.000 numerictypes.py:365(issubdtype)
+      600    0.001    0.000    0.001    0.000 __init__.py:1376(__init__)
+      100    0.000    0.000    0.001    0.000 abc.py:137(__instancecheck__)
+      900    0.001    0.000    0.001    0.000 __init__.py:2868(num_vertices)
+      100    0.000    0.000    0.001    0.000 {built-in method _abc._abc_instancecheck}
+      100    0.001    0.000    0.001    0.000 getlimits.py:497(__init__)
+      200    0.000    0.000    0.000    0.000 numerictypes.py:293(issubclass_)
+     1600    0.000    0.000    0.000    0.000 __init__.py:541(get_graph)
+      300    0.000    0.000    0.000    0.000 numeric.py:469(asarray)
+     34/1    0.000    0.000    0.000    0.000 abc.py:141(__subclasscheck__)
+     34/1    0.000    0.000    0.000    0.000 {built-in method _abc._abc_subclasscheck}
+     2600    0.000    0.000    0.000    0.000 {built-in method builtins.id}
+      400    0.000    0.000    0.000    0.000 __init__.py:2577(set_directed)
+      300    0.000    0.000    0.000    0.000 {method 'view' of 'numpy.ndarray' objects}
+     1600    0.000    0.000    0.000    0.000 __init__.py:548(key_type)
+      200    0.000    0.000    0.000    0.000 __init__.py:1323(__init__)
+     1400    0.000    0.000    0.000    0.000 __init__.py:2922(__get_base)
+      100    0.000    0.000    0.000    0.000 __init__.py:919(_check_prop_writable)
+      300    0.000    0.000    0.000    0.000 {built-in method builtins.issubclass}
+      100    0.000    0.000    0.000    0.000 __init__.py:3399(_vt_init)
+      100    0.000    0.000    0.000    0.000 __init__.py:925(_check_prop_scalar)
+      400    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+      100    0.000    0.000    0.000    0.000 getlimits.py:522(max)
+      600    0.000    0.000    0.000    0.000 __init__.py:3169(__get_base)
+      300    0.000    0.000    0.000    0.000 __init__.py:908(_set_pmap)
+      100    0.000    0.000    0.000    0.000 __init__.py:795(is_writable)
+        1    0.000    0.000    0.000    0.000 __init__.py:42(__getattr__)
+      300    0.000    0.000    0.000    0.000 __init__.py:2230(_get_vertex_index)
+      100    0.000    0.000    0.000    0.000 __init__.py:2708(get_vertex_filter)
+      400    0.000    0.000    0.000    0.000 __init__.py:140(_to_str)
+      200    0.000    0.000    0.000    0.000 __init__.py:2624(set_filters)
+        1    0.000    0.000    0.000    0.000 {built-in method _warnings.warn}
+       23    0.000    0.000    0.000    0.000 _collections_abc.py:392(__subclasshook__)
+        1    0.000    0.000    0.000    0.000 _collections_abc.py:252(__subclasshook__)
+        5    0.000    0.000    0.000    0.000 _collections_abc.py:72(_check_methods)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+        7    0.000    0.000    0.000    0.000 _collections_abc.py:302(__subclasshook__)
+        1    0.000    0.000    0.000    0.000 _collections_abc.py:349(__subclasshook__)
+        1    0.000    0.000    0.000    0.000 _collections_abc.py:271(__subclasshook__)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.globals}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling shortest path
+=======================
+
+         24903 function calls (24803 primitive calls) in 5.576 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    5.576    5.576 {built-in method builtins.exec}
+        1    0.003    0.003    5.576    5.576 <string>:1(<module>)
+      100    5.345    0.053    5.562    0.056 __init__.py:1591(shortest_distance)
+      100    0.000    0.000    0.139    0.001 decorators.py:1(copy_property)
+  200/100    0.002    0.000    0.139    0.001 decorators.py:126(wrapper)
+      100    0.082    0.001    0.135    0.001 __init__.py:2367(copy_property)
+      300    0.000    0.000    0.046    0.000 __init__.py:560(get_array)
+      300    0.043    0.000    0.046    0.000 __init__.py:582(_get_data)
+      700    0.002    0.000    0.038    0.000 __init__.py:166(_prop)
+      600    0.002    0.000    0.035    0.000 __init__.py:393(_get_any)
+      600    0.032    0.000    0.032    0.000 __init__.py:811(reserve)
+      200    0.002    0.000    0.014    0.000 __init__.py:3093(__init__)
+      200    0.005    0.000    0.013    0.000 __init__.py:2308(new_vertex_property)
+      100    0.000    0.000    0.013    0.000 __init__.py:662(<lambda>)
+      100    0.012    0.000    0.013    0.000 __init__.py:615(__get_set_f_array)
+      600    0.003    0.000    0.009    0.000 __init__.py:383(__init__)
+      100    0.009    0.000    0.009    0.000 __init__.py:1768(vertex)
+      200    0.003    0.000    0.009    0.000 __init__.py:1544(__init__)
+      100    0.000    0.000    0.006    0.000 __init__.py:2293(new_property)
+      800    0.002    0.000    0.004    0.000 __init__.py:208(_type_alias)
+      600    0.001    0.000    0.003    0.000 __init__.py:438(__del__)
+      400    0.003    0.000    0.003    0.000 {built-in method numpy.array}
+      600    0.001    0.000    0.003    0.000 __init__.py:270(_converter)
+      300    0.001    0.000    0.003    0.000 __init__.py:914(__new__)
+      600    0.002    0.000    0.003    0.000 __init__.py:433(__unregister_map)
+      400    0.002    0.000    0.002    0.000 __init__.py:3183(value_types)
+     1100    0.001    0.000    0.002    0.000 {built-in method builtins.isinstance}
+      700    0.002    0.000    0.002    0.000 __init__.py:552(value_type)
+      600    0.001    0.000    0.002    0.000 __init__.py:231(_python_type)
+      100    0.001    0.000    0.002    0.000 numerictypes.py:365(issubdtype)
+      600    0.001    0.000    0.002    0.000 __init__.py:428(__register_map)
+      600    0.001    0.000    0.001    0.000 __init__.py:1376(__init__)
+      100    0.001    0.000    0.001    0.000 getlimits.py:497(__init__)
+      200    0.001    0.000    0.001    0.000 numerictypes.py:293(issubclass_)
+      900    0.001    0.000    0.001    0.000 __init__.py:2868(num_vertices)
+      300    0.000    0.000    0.001    0.000 numeric.py:469(asarray)
+      100    0.000    0.000    0.001    0.000 abc.py:137(__instancecheck__)
+      300    0.001    0.000    0.001    0.000 {method 'view' of 'numpy.ndarray' objects}
+     1600    0.001    0.000    0.001    0.000 __init__.py:541(get_graph)
+      100    0.000    0.000    0.000    0.000 {built-in method _abc._abc_instancecheck}
+      400    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+      200    0.000    0.000    0.000    0.000 __init__.py:1323(__init__)
+     2600    0.000    0.000    0.000    0.000 {built-in method builtins.id}
+      300    0.000    0.000    0.000    0.000 {built-in method builtins.issubclass}
+      100    0.000    0.000    0.000    0.000 __init__.py:919(_check_prop_writable)
+      400    0.000    0.000    0.000    0.000 __init__.py:2577(set_directed)
+     1600    0.000    0.000    0.000    0.000 __init__.py:548(key_type)
+      100    0.000    0.000    0.000    0.000 getlimits.py:522(max)
+      100    0.000    0.000    0.000    0.000 __init__.py:3399(_vt_init)
+     1400    0.000    0.000    0.000    0.000 __init__.py:2922(__get_base)
+      100    0.000    0.000    0.000    0.000 __init__.py:925(_check_prop_scalar)
+      100    0.000    0.000    0.000    0.000 __init__.py:795(is_writable)
+      100    0.000    0.000    0.000    0.000 __init__.py:2708(get_vertex_filter)
+      300    0.000    0.000    0.000    0.000 __init__.py:908(_set_pmap)
+      600    0.000    0.000    0.000    0.000 __init__.py:3169(__get_base)
+      300    0.000    0.000    0.000    0.000 __init__.py:2230(_get_vertex_index)
+      200    0.000    0.000    0.000    0.000 __init__.py:2624(set_filters)
+      400    0.000    0.000    0.000    0.000 __init__.py:140(_to_str)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling PageRank
+==================
+
+         6303 function calls in 4.889 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    4.889    4.889 {built-in method builtins.exec}
+        1    0.002    0.002    4.888    4.888 <string>:1(<module>)
+      100    4.812    0.048    4.884    0.049 __init__.py:62(pagerank)
+      200    0.026    0.000    0.057    0.000 __init__.py:615(__get_set_f_array)
+      200    0.000    0.000    0.030    0.000 __init__.py:560(get_array)
+      200    0.027    0.000    0.030    0.000 __init__.py:582(_get_data)
+      100    0.000    0.000    0.026    0.000 __init__.py:662(<lambda>)
+      100    0.004    0.000    0.011    0.000 __init__.py:2308(new_vertex_property)
+      300    0.002    0.000    0.004    0.000 __init__.py:166(_prop)
+      100    0.001    0.000    0.004    0.000 __init__.py:383(__init__)
+      200    0.001    0.000    0.003    0.000 __init__.py:208(_type_alias)
+      200    0.001    0.000    0.003    0.000 __init__.py:914(__new__)
+      100    0.000    0.000    0.002    0.000 __init__.py:438(__del__)
+      200    0.002    0.000    0.002    0.000 __init__.py:3183(value_types)
+      100    0.002    0.000    0.002    0.000 __init__.py:433(__unregister_map)
+      100    0.001    0.000    0.001    0.000 __init__.py:393(_get_any)
+      100    0.001    0.000    0.001    0.000 __init__.py:270(_converter)
+      100    0.000    0.000    0.001    0.000 __init__.py:231(_python_type)
+      400    0.001    0.000    0.001    0.000 __init__.py:2868(num_vertices)
+      200    0.000    0.000    0.001    0.000 numeric.py:469(asarray)
+      200    0.001    0.000    0.001    0.000 {method 'view' of 'numpy.ndarray' objects}
+      200    0.000    0.000    0.000    0.000 {built-in method numpy.array}
+      100    0.000    0.000    0.000    0.000 __init__.py:552(value_type)
+      100    0.000    0.000    0.000    0.000 __init__.py:428(__register_map)
+      300    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+      600    0.000    0.000    0.000    0.000 __init__.py:541(get_graph)
+      200    0.000    0.000    0.000    0.000 __init__.py:2708(get_vertex_filter)
+      100    0.000    0.000    0.000    0.000 __init__.py:811(reserve)
+      500    0.000    0.000    0.000    0.000 {built-in method builtins.id}
+      200    0.000    0.000    0.000    0.000 __init__.py:908(_set_pmap)
+      200    0.000    0.000    0.000    0.000 __init__.py:548(key_type)
+      100    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+      300    0.000    0.000    0.000    0.000 __init__.py:2922(__get_base)
+      200    0.000    0.000    0.000    0.000 __init__.py:140(_to_str)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling k-core
+================
+
+         3603 function calls in 11.313 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   11.313   11.313 {built-in method builtins.exec}
+        1    0.002    0.002   11.313   11.313 <string>:1(<module>)
+      100   11.282    0.113   11.309    0.113 __init__.py:1517(kcore_decomposition)
+      100    0.001    0.000    0.018    0.000 __init__.py:166(_prop)
+      100    0.001    0.000    0.016    0.000 __init__.py:393(_get_any)
+      100    0.015    0.000    0.015    0.000 __init__.py:811(reserve)
+      100    0.004    0.000    0.009    0.000 __init__.py:2308(new_vertex_property)
+      100    0.001    0.000    0.003    0.000 __init__.py:383(__init__)
+      200    0.001    0.000    0.003    0.000 __init__.py:208(_type_alias)
+      100    0.000    0.000    0.002    0.000 __init__.py:438(__del__)
+      100    0.002    0.000    0.002    0.000 __init__.py:433(__unregister_map)
+      200    0.002    0.000    0.002    0.000 __init__.py:3183(value_types)
+      100    0.001    0.000    0.001    0.000 __init__.py:270(_converter)
+      100    0.000    0.000    0.001    0.000 __init__.py:231(_python_type)
+      100    0.000    0.000    0.000    0.000 __init__.py:919(_check_prop_writable)
+      200    0.000    0.000    0.000    0.000 __init__.py:552(value_type)
+      100    0.000    0.000    0.000    0.000 __init__.py:428(__register_map)
+      100    0.000    0.000    0.000    0.000 __init__.py:2868(num_vertices)
+      100    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+      100    0.000    0.000    0.000    0.000 __init__.py:925(_check_prop_scalar)
+      100    0.000    0.000    0.000    0.000 __init__.py:795(is_writable)
+      500    0.000    0.000    0.000    0.000 {built-in method builtins.id}
+      200    0.000    0.000    0.000    0.000 __init__.py:541(get_graph)
+      200    0.000    0.000    0.000    0.000 __init__.py:548(key_type)
+      300    0.000    0.000    0.000    0.000 __init__.py:2922(__get_base)
+      200    0.000    0.000    0.000    0.000 __init__.py:140(_to_str)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling strongly connected components
+=======================================
+
+         3603 function calls in 8.797 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    8.797    8.797 {built-in method builtins.exec}
+        1    0.002    0.002    8.797    8.797 <string>:1(<module>)
+      100    8.766    0.088    8.793    0.088 __init__.py:1002(label_components)
+      100    0.001    0.000    0.017    0.000 __init__.py:166(_prop)
+      100    0.001    0.000    0.016    0.000 __init__.py:393(_get_any)
+      100    0.015    0.000    0.015    0.000 __init__.py:811(reserve)
+      100    0.004    0.000    0.010    0.000 __init__.py:2308(new_vertex_property)
+      100    0.001    0.000    0.003    0.000 __init__.py:383(__init__)
+      200    0.001    0.000    0.003    0.000 __init__.py:208(_type_alias)
+      100    0.000    0.000    0.002    0.000 __init__.py:438(__del__)
+      200    0.002    0.000    0.002    0.000 __init__.py:3183(value_types)
+      100    0.002    0.000    0.002    0.000 __init__.py:433(__unregister_map)
+      100    0.001    0.000    0.001    0.000 __init__.py:270(_converter)
+      100    0.000    0.000    0.001    0.000 __init__.py:231(_python_type)
+      100    0.000    0.000    0.000    0.000 __init__.py:919(_check_prop_writable)
+      200    0.000    0.000    0.000    0.000 __init__.py:552(value_type)
+      100    0.000    0.000    0.000    0.000 __init__.py:428(__register_map)
+      100    0.000    0.000    0.000    0.000 __init__.py:2868(num_vertices)
+      100    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+      100    0.000    0.000    0.000    0.000 __init__.py:925(_check_prop_scalar)
+      100    0.000    0.000    0.000    0.000 __init__.py:795(is_writable)
+      500    0.000    0.000    0.000    0.000 {built-in method builtins.id}
+      200    0.000    0.000    0.000    0.000 __init__.py:541(get_graph)
+      200    0.000    0.000    0.000    0.000 __init__.py:548(key_type)
+      300    0.000    0.000    0.000    0.000 __init__.py:2922(__get_base)
+      200    0.000    0.000    0.000    0.000 __init__.py:140(_to_str)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

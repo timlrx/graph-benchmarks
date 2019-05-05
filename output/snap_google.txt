@@ -1,0 +1,97 @@
+Profiling dataset web-Google.txt
+Profiling loading
+=================
+()
+         303 function calls in 903.415 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1   33.187   33.187  903.415  903.415 <string>:1(<module>)
+      100    0.001    0.000  870.227    8.702 snap.py:241657(LoadEdgeListStr_PNGraph)
+      100    0.001    0.000  870.228    8.702 snap.py:257088(LoadEdgeListStr)
+      100  870.226    8.702  870.226    8.702 {_snap.LoadEdgeListStr_PNGraph}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {range}
+
+
+Profiling 2-hops
+================
+()
+         303 function calls in 0.293 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001    0.293    0.293 <string>:1(<module>)
+      100    0.001    0.000    0.292    0.003 snap.py:256548(GetNodesAtHop)
+      100    0.000    0.000    0.291    0.003 snap.py:241243(GetNodesAtHop_PNGraph)
+      100    0.291    0.003    0.291    0.003 {_snap.GetNodesAtHop_PNGraph}
+        1    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling shortest path
+=======================
+()
+         303 function calls in 29.709 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001   29.709   29.709 <string>:1(<module>)
+      100    0.001    0.000   29.708    0.297 snap.py:256944(GetShortPath)
+      100    0.001    0.000   29.706    0.297 snap.py:241289(GetShortPath_PNGraph)
+      100   29.706    0.297   29.706    0.297 {_snap.GetShortPath_PNGraph}
+        1    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling PageRank
+==================
+()
+         303 function calls in 415.744 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001  415.744  415.744 <string>:1(<module>)
+      100    0.002    0.000  415.742    4.157 snap.py:256314(GetPageRank)
+      100    0.001    0.000  415.741    4.157 snap.py:240542(GetPageRank_PNGraph)
+      100  415.740    4.157  415.740    4.157 {_snap.GetPageRank_PNGraph}
+        1    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling k-core
+================
+()
+         303 function calls in 157.172 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001  157.172  157.172 <string>:1(<module>)
+      100    0.001    0.000  157.171    1.572 snap.py:256953(GetKCoreNodes)
+      100    0.001    0.000  157.169    1.572 snap.py:241869(GetKCoreNodes_PNGraph)
+      100  157.169    1.572  157.169    1.572 {_snap.GetKCoreNodes_PNGraph}
+        1    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling strongly connected components
+=======================================
+()
+         303 function calls in 202.115 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001  202.115  202.115 <string>:1(<module>)
+      100    0.001    0.000  202.114    2.021 snap.py:256602(GetSccs)
+      100    0.001    0.000  202.112    2.021 snap.py:240455(GetSccs_PNGraph)
+      100  202.112    2.021  202.112    2.021 {_snap.GetSccs_PNGraph}
+        1    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

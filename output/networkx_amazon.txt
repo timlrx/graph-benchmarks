@@ -1,0 +1,252 @@
+Profiling dataset amazon0302.txt
+Profiling loading
+=================
+
+         160534254 function calls in 99.650 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       10    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1009(_handle_fromlist)
+        1    3.469    3.469   99.650   99.650 <string>:1(<module>)
+       10    0.000    0.000    0.000    0.000 classic.py:358(empty_graph)
+       10    0.000    0.000    0.000    0.000 decorator.py:decorator-gen-22>:1(empty_graph)
+       10    0.000    0.000   96.181    9.618 decorator.py:decorator-gen-584>:1(read_edgelist)
+       10    0.000    0.000   96.181    9.618 decorators.py:171(_open_file)
+       10    0.000    0.000    0.000    0.000 decorators.py:283(_nodes_or_number)
+        1    0.000    0.000    0.000    0.000 decorators.py:98(<lambda>)
+       10   26.730    2.673   96.180    9.618 edgelist.py:182(parse_edgelist)
+       10    0.000    0.000   96.180    9.618 edgelist.py:300(read_edgelist)
+ 12348780    4.293    0.000    6.797    0.000 edgelist.py:366(<genexpr>)
+       10    0.000    0.000    0.000    0.000 genericpath.py:117(_splitext)
+       10    0.000    0.000    0.000    0.000 graph.py:301(__init__)
+       10    0.000    0.000    0.000    0.000 graph.py:520(add_nodes_from)
+ 12348770   42.417    0.000   47.136    0.000 graph.py:858(add_edge)
+       10    0.000    0.000    0.000    0.000 misc.py:64(is_string_like)
+       10    0.000    0.000    0.000    0.000 posixpath.py:121(splitext)
+        1    0.000    0.000   99.650   99.650 {built-in method builtins.exec}
+       10    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+       20    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+       10    0.000    0.000    0.000    0.000 {built-in method builtins.iter}
+ 37046310    3.275    0.000    3.275    0.000 {built-in method builtins.len}
+       10    0.001    0.000    0.001    0.000 {built-in method io.open}
+       10    0.000    0.000    0.000    0.000 {built-in method posix.fspath}
+       10    0.000    0.000    0.000    0.000 {method 'close' of '_io.BufferedReader' objects}
+ 12348770    2.505    0.000    2.505    0.000 {method 'decode' of 'bytes' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+ 12348770    2.536    0.000    2.536    0.000 {method 'find' of 'str' objects}
+ 12348770    2.469    0.000    2.469    0.000 {method 'get' of 'dict' objects}
+ 24697540    4.584    0.000    4.584    0.000 {method 'pop' of 'list' objects}
+       20    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
+ 12348770    3.410    0.000    3.410    0.000 {method 'split' of 'str' objects}
+ 12348770    1.710    0.000    1.710    0.000 {method 'strip' of 'str' objects}
+ 12348780    2.250    0.000    2.250    0.000 {method 'update' of 'dict' objects}
+
+
+Profiling 2-hops
+================
+
+         45663 function calls in 0.014 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.014    0.014 {built-in method builtins.exec}
+        1    0.000    0.000    0.014    0.014 <string>:1(<module>)
+       10    0.000    0.000    0.014    0.001 unweighted.py:25(single_source_shortest_path_length)
+      960    0.001    0.000    0.014    0.000 unweighted.py:69(_single_shortest_path_length)
+      950    0.007    0.000    0.012    0.000 {method 'update' of 'dict' objects}
+    19480    0.002    0.000    0.003    0.000 _collections_abc.py:719(__iter__)
+    18530    0.002    0.000    0.002    0.000 coreviews.py:53(__getitem__)
+      950    0.001    0.000    0.001    0.000 coreviews.py:80(__getitem__)
+      950    0.000    0.000    0.000    0.000 _collections_abc.py:672(keys)
+      950    0.000    0.000    0.000    0.000 coreviews.py:50(__iter__)
+      960    0.000    0.000    0.000    0.000 coreviews.py:44(__init__)
+      950    0.000    0.000    0.000    0.000 _collections_abc.py:698(__init__)
+      950    0.000    0.000    0.000    0.000 {built-in method builtins.iter}
+       10    0.000    0.000    0.000    0.000 digraph.py:325(adj)
+       10    0.000    0.000    0.000    0.000 graph.py:417(__contains__)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling shortest path
+=======================
+
+         59581733 function calls in 33.081 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   33.081   33.081 {built-in method builtins.exec}
+        1    0.083    0.083   33.081   33.081 <string>:1(<module>)
+       10    0.000    0.000   32.998    3.300 generic.py:178(shortest_path_length)
+       10    1.147    0.115   32.998    3.300 unweighted.py:25(single_source_shortest_path_length)
+  2621120    5.450    0.000   31.851    0.000 unweighted.py:69(_single_shortest_path_length)
+  2621110   11.772    0.000   23.278    0.000 {method 'update' of 'dict' objects}
+ 20616950    5.321    0.000    6.387    0.000 _collections_abc.py:719(__iter__)
+ 17995840    3.795    0.000    3.795    0.000 coreviews.py:53(__getitem__)
+  2621110    2.732    0.000    3.124    0.000 coreviews.py:80(__getitem__)
+  2621110    0.947    0.000    1.324    0.000 _collections_abc.py:672(keys)
+  2621110    0.677    0.000    1.066    0.000 coreviews.py:50(__iter__)
+  2621120    0.392    0.000    0.392    0.000 coreviews.py:44(__init__)
+  2621110    0.389    0.000    0.389    0.000 {built-in method builtins.iter}
+  2621110    0.378    0.000    0.378    0.000 _collections_abc.py:698(__init__)
+       10    0.000    0.000    0.000    0.000 digraph.py:325(adj)
+       10    0.000    0.000    0.000    0.000 graph.py:417(__contains__)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling PageRank
+==================
+
+         462141083 function calls (462141063 primitive calls) in 257.117 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  257.117  257.117 {built-in method builtins.exec}
+        1    0.171    0.171  257.117  257.117 <string>:1(<module>)
+       10    0.000    0.000  256.945   25.695 decorator.py:decorator-gen-278>:1(pagerank)
+    20/10    6.105    0.305  256.945   25.695 decorators.py:64(_not_implemented_for)
+       10   29.254    2.925  250.895   25.089 pagerank_alg.py:16(pagerank)
+       10    0.000    0.000  154.829   15.483 decorator.py:decorator-gen-572>:1(stochastic_graph)
+       10    9.386    0.939  154.775   15.478 stochastic.py:21(stochastic_graph)
+       10    0.000    0.000  119.436   11.944 digraph.py:270(__init__)
+       10    1.573    0.157  119.435   11.944 convert.py:35(to_networkx_graph)
+       10    0.000    0.000  115.138   11.514 convert.py:272(from_dict_of_dicts)
+       10   71.914    7.191  109.846   10.985 digraph.py:643(add_edges_from)
+ 20616950   11.166    0.000   32.874    0.000 graph.py:448(__getitem__)
+ 17995850    6.867    0.000   28.328    0.000 convert.py:345(<genexpr>)
+       10    2.082    0.208   24.108    2.411 pagerank_alg.py:141(<listcomp>)
+ 25859190   13.010    0.000   22.371    0.000 _collections_abc.py:742(__iter__)
+  5242240    4.945    0.000   20.483    0.000 {built-in method builtins.sum}
+  2621120    2.985    0.000   18.519    0.000 reportviews.py:342(__call__)
+ 23238060   11.138    0.000   13.832    0.000 coreviews.py:80(__getitem__)
+  2621110    2.246    0.000   13.209    0.000 reportviews.py:459(__getitem__)
+  2621120    2.891    0.000   12.933    0.000 reportviews.py:466(__iter__)
+ 77225580   11.781    0.000   11.781    0.000 {method 'get' of 'dict' objects}
+ 20616970    8.100    0.000   10.540    0.000 digraph.py:325(adj)
+ 17995850    8.652    0.000   10.430    0.000 reportviews.py:666(<genexpr>)
+ 20616950    5.353    0.000    8.087    0.000 reportviews.py:464(<genexpr>)
+ 35991680    8.013    0.000    8.013    0.000 coreviews.py:53(__getitem__)
+ 20616950    4.814    0.000    7.451    0.000 reportviews.py:475(<genexpr>)
+ 41233920    6.277    0.000    6.277    0.000 {method 'update' of 'dict' objects}
+       20    4.947    0.247    5.291    0.265 digraph.py:428(add_nodes_from)
+ 43855040    5.134    0.000    5.134    0.000 coreviews.py:44(__init__)
+  5242240    3.482    0.000    4.774    0.000 reportviews.py:334(__init__)
+  2621120    1.059    0.000    3.508    0.000 digraph.py:1032(out_degree)
+  5242240    1.524    0.000    2.485    0.000 coreviews.py:50(__iter__)
+       10    1.798    0.180    2.022    0.202 pagerank_alg.py:155(<listcomp>)
+ 17995840    1.542    0.000    1.542    0.000 reportviews.py:655(<lambda>)
+       30    1.539    0.051    1.539    0.051 {built-in method fromkeys}
+17995870/17995860    1.535    0.000    1.535    0.000 {built-in method builtins.len}
+  2621130    0.996    0.000    1.404    0.000 _collections_abc.py:676(items)
+ 10484530    1.292    0.000    1.292    0.000 {built-in method builtins.hasattr}
+  2621110    1.178    0.000    1.178    0.000 reportviews.py:177(__getitem__)
+  5242290    0.961    0.000    0.961    0.000 {built-in method builtins.iter}
+  5242220    0.536    0.000    0.536    0.000 {method 'values' of 'dict' objects}
+  2621130    0.408    0.000    0.408    0.000 _collections_abc.py:698(__init__)
+  2621120    0.236    0.000    0.236    0.000 {method 'items' of 'dict' objects}
+  2621110    0.224    0.000    0.224    0.000 {built-in method builtins.abs}
+       10    0.000    0.000    0.000    0.000 decorator.py:decorator-gen-22>:1(empty_graph)
+       10    0.000    0.000    0.000    0.000 decorators.py:283(_nodes_or_number)
+       10    0.000    0.000    0.000    0.000 digraph.py:841(edges)
+       10    0.000    0.000    0.000    0.000 reportviews.py:906(__init__)
+       30    0.000    0.000    0.000    0.000 graph.py:399(__iter__)
+       10    0.000    0.000    0.000    0.000 reportviews.py:933(__call__)
+       10    0.000    0.000    0.000    0.000 classic.py:358(empty_graph)
+       20    0.000    0.000    0.000    0.000 graph.py:663(nodes)
+       10    0.000    0.000    0.000    0.000 graph.py:797(number_of_nodes)
+       10    0.000    0.000    0.000    0.000 digraph.py:344(succ)
+       10    0.000    0.000    0.000    0.000 reportviews.py:642(__init__)
+       10    0.000    0.000    0.000    0.000 reportviews.py:665(__iter__)
+       10    0.000    0.000    0.000    0.000 digraph.py:1079(clear)
+       10    0.000    0.000    0.000    0.000 graph.py:431(__len__)
+       70    0.000    0.000    0.000    0.000 digraph.py:1098(is_multigraph)
+       20    0.000    0.000    0.000    0.000 reportviews.py:167(__init__)
+       10    0.000    0.000    0.000    0.000 pagerank_alg.py:147(<genexpr>)
+       50    0.000    0.000    0.000    0.000 digraph.py:1102(is_directed)
+       10    0.000    0.000    0.000    0.000 reportviews.py:174(__iter__)
+       40    0.000    0.000    0.000    0.000 {method 'clear' of 'dict' objects}
+       10    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling k-core
+================
+
+         49451083 function calls in 86.166 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   86.166   86.166 {built-in method builtins.exec}
+        1    0.050    0.050   86.166   86.166 <string>:1(<module>)
+       10    0.000    0.000   86.116    8.612 decorator.py:decorator-gen-226>:1(core_number)
+       10    0.977    0.098   86.115    8.612 decorators.py:64(_not_implemented_for)
+       10   30.639    3.064   85.138    8.514 core.py:42(core_number)
+       10   19.758    1.976   26.007    2.601 core.py:96(<dictcomp>)
+ 12753700   16.754    0.000   16.754    0.000 {method 'remove' of 'list' objects}
+       10    0.000    0.000    6.445    0.645 function.py:1177(number_of_selfloops)
+       10    0.000    0.000    6.445    0.644 {built-in method builtins.sum}
+       10    0.000    0.000    6.445    0.644 function.py:1199(<genexpr>)
+       10    0.958    0.096    6.445    0.644 function.py:1174(<genexpr>)
+  2621110    2.142    0.000    6.249    0.000 function.py:833(all_neighbors)
+  2621120    2.870    0.000    3.286    0.000 reportviews.py:365(__iter__)
+  2621120    1.123    0.000    3.109    0.000 _collections_abc.py:742(__iter__)
+  2621110    1.247    0.000    2.378    0.000 _collections_abc.py:664(__contains__)
+  2621110    1.711    0.000    2.076    0.000 digraph.py:816(predecessors)
+  2621110    1.686    0.000    1.986    0.000 coreviews.py:80(__getitem__)
+  2621110    1.467    0.000    1.796    0.000 digraph.py:784(successors)
+  2621110    1.130    0.000    1.130    0.000 coreviews.py:53(__getitem__)
+       10    1.118    0.112    1.118    0.112 {built-in method builtins.sorted}
+       10    0.889    0.089    0.889    0.089 core.py:93(<dictcomp>)
+  5242240    0.694    0.000    0.694    0.000 {built-in method builtins.iter}
+  5242220    0.416    0.000    0.416    0.000 {built-in method builtins.len}
+  2621120    0.300    0.000    0.300    0.000 coreviews.py:44(__init__)
+  2621130    0.235    0.000    0.235    0.000 digraph.py:1102(is_directed)
+     1530    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+       10    0.000    0.000    0.000    0.000 function.py:1098(selfloop_edges)
+       10    0.000    0.000    0.000    0.000 digraph.py:938(degree)
+       10    0.000    0.000    0.000    0.000 reportviews.py:334(__init__)
+       10    0.000    0.000    0.000    0.000 digraph.py:325(adj)
+       10    0.000    0.000    0.000    0.000 graph.py:399(__iter__)
+       10    0.000    0.000    0.000    0.000 _collections_abc.py:676(items)
+       20    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+       10    0.000    0.000    0.000    0.000 coreviews.py:50(__iter__)
+       10    0.000    0.000    0.000    0.000 _collections_abc.py:698(__init__)
+       10    0.000    0.000    0.000    0.000 reportviews.py:342(__call__)
+       30    0.000    0.000    0.000    0.000 digraph.py:1098(is_multigraph)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling strongly connected components
+=======================================
+
+         70418113 function calls (67797003 primitive calls) in 59.422 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   59.422   59.422 {built-in method builtins.exec}
+        1    0.102    0.102   59.422   59.422 <string>:1(<module>)
+       10    0.478    0.048   59.320    5.932 <string>:1(<listcomp>)
+       20   29.306    1.465   58.842    2.942 strongly_connected.py:27(strongly_connected_components)
+  5242220    3.013    0.000   20.663    0.000 graph.py:448(__getitem__)
+  5242220   14.034    0.000   14.669    0.000 coreviews.py:80(__getitem__)
+ 17995840    4.046    0.000    4.046    0.000 {built-in method builtins.min}
+  5242220    2.260    0.000    2.981    0.000 digraph.py:325(adj)
+7863340/5242230    1.842    0.000    2.498    0.000 {built-in method builtins.iter}
+  5242220    1.358    0.000    2.368    0.000 coreviews.py:50(__iter__)
+ 10484440    1.355    0.000    1.355    0.000 coreviews.py:44(__init__)
+  2621100    0.588    0.000    0.588    0.000 {method 'add' of 'set' objects}
+  5242210    0.552    0.000    0.552    0.000 {method 'pop' of 'list' objects}
+  5242200    0.487    0.000    0.487    0.000 {method 'append' of 'list' objects}
+       10    0.000    0.000    0.000    0.000 decorator.py:decorator-gen-180>:1(strongly_connected_components)
+       10    0.000    0.000    0.000    0.000 decorators.py:64(_not_implemented_for)
+       10    0.000    0.000    0.000    0.000 graph.py:399(__iter__)
+       20    0.000    0.000    0.000    0.000 digraph.py:1102(is_directed)
+       20    0.000    0.000    0.000    0.000 digraph.py:1098(is_multigraph)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

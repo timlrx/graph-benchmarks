@@ -1,0 +1,102 @@
+ WARNING: module 'sklearn' not found, supervised link prediction won't be available 
+WARNING: module 'seaborn' is not installed, plotting functionality will be limited
+No module named 'seaborn'
+Profiling dataset soc-pokec-relationships.txt
+Profiling loading
+=================
+
+         613 function calls in 1576.126 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1   13.108   13.108 1576.125 1576.125 <string>:1(<module>)
+       10    0.000    0.000    0.001    0.000 GEXFIO.py:8(__init__)
+       10    0.000    0.000    0.001    0.000 GraphMLIO.py:10(__init__)
+       10    0.000    0.000    0.001    0.000 GraphMLIO.py:85(__init__)
+       10    0.000    0.000    0.000    0.000 _bootlocale.py:33(getpreferredencoding)
+       10    0.000    0.000    0.000    0.000 codecs.py:260(__init__)
+       10    0.000    0.000    0.000    0.000 codecs.py:309(__init__)
+      160    0.000    0.000    0.000    0.000 enum.py:610(__hash__)
+       10    0.000    0.000    0.000    0.000 genericpath.py:27(isfile)
+       10    0.001    0.000 1563.018  156.302 graphio.py:122(readGraph)
+       10    0.000    0.000    0.000    0.000 graphio.py:177(__init__)
+       10    0.001    0.000    0.003    0.000 graphio.py:89(getReader)
+       10    0.000    0.000    0.000    0.000 handler.py:54(__init__)
+       10    0.000    0.000    0.000    0.000 posixpath.py:144(basename)
+       10    0.000    0.000    0.000    0.000 posixpath.py:41(_get_sep)
+       10    0.000    0.000    0.000    0.000 queue.py:205(_init)
+       10    0.000    0.000    0.000    0.000 queue.py:33(__init__)
+       30    0.000    0.000    0.000    0.000 threading.py:216(__init__)
+       10    0.000    0.000    0.000    0.000 {built-in method _locale.nl_langinfo}
+       10    0.000    0.000    0.000    0.000 {built-in method _stat.S_ISREG}
+       10    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        1    0.000    0.000 1576.126 1576.126 {built-in method builtins.exec}
+      160    0.000    0.000    0.000    0.000 {built-in method builtins.hash}
+       10    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+       10    0.242    0.024    0.242    0.024 {built-in method io.open}
+       10    0.000    0.000    0.000    0.000 {built-in method posix.fspath}
+       10    0.000    0.000    0.000    0.000 {built-in method posix.stat}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+       10 1562.771  156.277 1562.771  156.277 {method 'read' of 'networkit._NetworKit.GraphReader' objects}
+       10    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
+       10    0.000    0.000    0.000    0.000 {method 'setName' of 'networkit._NetworKit.Graph' objects}
+       10    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+
+
+Profiling shortest path
+=======================
+
+         13 function calls in 68.703 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.004    0.004   68.703   68.703 {built-in method builtins.exec}
+        1    8.744    8.744   68.699   68.699 <string>:1(<module>)
+       10   59.955    5.996   59.955    5.996 {method 'run' of 'networkit._NetworKit.Algorithm' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling PageRank
+==================
+
+         13 function calls in 2.026 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.004    0.004    2.026    2.026 {built-in method builtins.exec}
+        1    0.002    0.002    2.023    2.023 <string>:1(<module>)
+       10    2.020    0.202    2.020    0.202 {method 'run' of 'networkit._NetworKit.Algorithm' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling k-core
+================
+
+         13 function calls in 3.417 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    3.417    3.417 {built-in method builtins.exec}
+        1    0.000    0.000    3.417    3.417 <string>:1(<module>)
+       10    3.417    0.342    3.417    0.342 {method 'run' of 'networkit._NetworKit.Algorithm' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling strongly connected components
+=======================================
+
+         13 function calls in 46.893 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   46.893   46.893 {built-in method builtins.exec}
+        1    0.000    0.000   46.893   46.893 <string>:1(<module>)
+       10   46.893    4.689   46.893    4.689 {method 'run' of 'networkit._NetworKit.StronglyConnectedComponents' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
