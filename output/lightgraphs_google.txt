@@ -1,0 +1,57 @@
+loadgraph
+ 17.961630 seconds (79.21 M allocations: 3.925 GiB, 31.73% gc time)
+loaded {875713, 5105039} directed simple UInt32 graph
+
+
+shortest paths
+BenchmarkTools.Trial: 
+  memory estimate:  18.01 MiB
+  allocs estimate:  247
+  --------------
+  minimum time:     90.188 ms (0.00% GC)
+  median time:      93.993 ms (0.00% GC)
+  mean time:        93.792 ms (0.19% GC)
+  maximum time:     97.554 ms (1.17% GC)
+  --------------
+  samples:          100
+  evals/sample:     1
+
+pagerank
+BenchmarkTools.Trial: 
+  memory estimate:  22.04 MiB
+  allocs estimate:  24
+  --------------
+  minimum time:     70.738 ms (0.00% GC)
+  median time:      75.650 ms (0.00% GC)
+  mean time:        75.640 ms (0.23% GC)
+  maximum time:     79.580 ms (1.17% GC)
+  --------------
+  samples:          100
+  evals/sample:     1
+
+core_number
+BenchmarkTools.Trial: 
+  memory estimate:  753.46 MiB
+  allocs estimate:  8767702
+  --------------
+  minimum time:     1.869 s (6.04% GC)
+  median time:      1.975 s (8.39% GC)
+  mean time:        1.982 s (8.80% GC)
+  maximum time:     2.247 s (17.08% GC)
+  --------------
+  samples:          100
+  evals/sample:     1
+
+scc
+BenchmarkTools.Trial: 
+  memory estimate:  62.70 MiB
+  allocs estimate:  752421
+  --------------
+  minimum time:     353.142 ms (0.00% GC)
+  median time:      375.180 ms (0.00% GC)
+  mean time:        381.308 ms (3.32% GC)
+  maximum time:     420.730 ms (11.81% GC)
+  --------------
+  samples:          100
+  evals/sample:     1
+
