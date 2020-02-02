@@ -2,19 +2,10 @@ from graph_tool.all import *
 import cProfile
 import sys
 
-n = sys.argv[1]
-filename = sys.argv[2]
+filename = sys.argv[1]
+n = sys.argv[2]
 
-if (filename=="amazon"):
-    file="amazon0302.txt"
-elif (filename=="google"):
-    file="web-Google.txt"
-elif (filename=="pokec"):
-    file="soc-pokec-relationships.txt"
-else:
-    file="email-Enron.txt"
-
-print(f"Profiling dataset {file}")
+print(f"Profiling dataset {filename}")
 
 openmp_set_num_threads(16)
 
@@ -22,7 +13,7 @@ print("Profiling loading")
 print("=================")
 print()
 
-cProfile.run(f'''for i in range({n}): g = load_graph_from_csv('../data/{file}', directed=False, csv_options={{'delimiter': '\t', 'quotechar': '"'}})''')
+cProfile.run(f'''for i in range({n}): g = load_graph_from_csv(filename, directed=False, csv_options={{'delimiter': '\t', 'quotechar': '"'}})''')
 
 print("Profiling 2-hops")
 print("================")

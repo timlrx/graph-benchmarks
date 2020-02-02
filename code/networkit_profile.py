@@ -2,26 +2,17 @@ from networkit import *
 import cProfile
 import sys
 
-n = sys.argv[1]
-filename = sys.argv[2]
-
-if (filename=="amazon"):
-    file="amazon0302.txt"
-elif (filename=="google"):
-    file="web-Google.txt"
-elif (filename=="pokec"):
-    file="soc-pokec-relationships.txt"
-else:
-    file="email-Enron.txt"
+filename = sys.argv[1]
+n = sys.argv[2]
 
 engineering.setNumberOfThreads(16)
-print(f"Profiling dataset {file}")
+print(f"Profiling dataset {filename}")
 
 print("Profiling loading")
 print("=================")
 print()
 
-cProfile.run(f'''for i in range({n}): g = readGraph(f"../data/{file}", Format.SNAP)''')
+cProfile.run(f'''for i in range({n}): g = readGraph(filename, Format.SNAP)''')
 
 print("Profiling shortest path")
 print("=======================")

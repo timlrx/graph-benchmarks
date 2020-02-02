@@ -2,30 +2,21 @@ from networkx import *
 import cProfile
 import sys
 
-n = sys.argv[1]
-filename = sys.argv[2]
-
-if (filename=="amazon"):
-    file="amazon0302.txt"
-elif (filename=="google"):
-    file="web-Google.txt"
-elif (filename=="pokec"):
-    file="soc-pokec-relationships.txt"
-else:
-    file="email-Enron.txt"
+filename = sys.argv[1]
+n = sys.argv[2]
 
 if (filename=="pokec"):
     nodeid = '1'
 else:
     nodeid = '0'
 
-print(f"Profiling dataset {file}")
+print(f"Profiling dataset {filename}")
 
 print("Profiling loading")
 print("=================")
 print()
 
-cProfile.run(f'''for i in range({n}): g = read_edgelist(f"../data/{file}", delimiter="\t")''')
+cProfile.run(f'''for i in range({n}): g = read_edgelist(filename, delimiter="\t")''')
 g = g.to_directed()
 
 print("Profiling 2-hops")

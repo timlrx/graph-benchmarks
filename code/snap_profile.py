@@ -1,27 +1,18 @@
 import sys
-sys.path.append('../snap-4.1.0-4.1-centos6.5-x64-py2.6')
+sys.path.append('snap-4.1.0-4.1-centos6.5-x64-py2.6')
 import snap
 import cProfile
 
-n = int(sys.argv[1])
-filename = sys.argv[2]
+filename = sys.argv[1]
+n = int(sys.argv[2])
 
-if (filename=="amazon"):
-    file="amazon0302.txt"
-elif (filename=="google"):
-    file="web-Google.txt"
-elif (filename=="pokec"):
-    file="soc-pokec-relationships.txt"
-else:
-    file="email-Enron.txt"
-
-print("Profiling dataset {}".format(file))
+print("Profiling dataset {}".format(filename))
 
 print("Profiling loading")
 print("=================")
 print()
 
-cProfile.run('''for i in range({}): g = snap.LoadEdgeListStr(snap.PNGraph, "../data/{}", 0, 1)'''.format(n, file))
+cProfile.run('''for i in range({}): g = snap.LoadEdgeListStr(snap.PNGraph, "{}", 0, 1)'''.format(n, filename))
 
 print("Profiling 2-hops")
 print("================")
