@@ -20,7 +20,7 @@ Each algorithm was run 100 times on the Amazon and Google dataset and 10 times o
 
 The average run time is shown in the table below. Due to differences in profiling techniques and possibly code implementation, the results of the algorithms may differ. Please refer to the respective code bases for implementation details.
 
-| dataset | algorithm            | graph-tool | igraph | networkit | networkx | snap  | lightgraphs |
+| Dataset | Algorithm            | graph-tool | Igraph | NetworKit | NetworkX | SNAP  | LightGraphs |
 | ------- | -------------------- | ---------- | ------ | --------- | -------- | ----- | ----------- |
 | Amazon  | connected components | 0.09       | 0.48   | 0.21      | 5.94     | 0.40  | 0.099       |
 | Amazon  | k-core number        | 0.11       | 0.33   | 0.01      | 8.62     | 0.42  | 0.43        |
