@@ -18,7 +18,7 @@ print("Profiling shortest path")
 print("=======================")
 print()
 
-cProfile.run(f"for i in range({n}): distance.BFS(g, 0).run()", sort="cumulative")
+cProfile.run(f"for i in range({n}): distance.BFS(g, 0, storePaths=False).run()", sort="cumulative")
 
 print("Profiling PageRank")
 print("==================")
