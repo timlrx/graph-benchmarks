@@ -13,6 +13,7 @@ using LightGraphs.ShortestPaths: shortest_paths, BFS, ThreadedBFS
 using LightGraphs.Centrality: centrality, PageRank, ThreadedPageRank
 using LightGraphs.Degeneracy: core_number, KabirMadduri
 using LightGraphs.Connectivity: connected_components, Kosaraju
+using LinearAlgebra.BLAS
 
 using GraphIO
 using SortingAlgorithms: RadixSort
@@ -50,7 +51,10 @@ println("\n")
 
 # note: this might not be as performant because BLAS is inherently multi-threaded.
 println("pagerank: threaded")
+nb = ccall((:openblas_get_num_threads64_, Base.libblas_name), Cint, ())
+BLAS.set_num_threads(1)
 show(stdout, MIME"text/plain"(), @benchmark centrality($g, ThreadedPageRank(0.85, 10000000, 1e-3)) samples = n seconds = 300)
+BLAS.set_num_threads(nb)
 println("\n")
 
 println("core_number")
