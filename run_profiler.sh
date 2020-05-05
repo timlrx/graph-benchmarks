@@ -30,6 +30,9 @@ elif [[ $CODE == *"networkx"* ]]; then
     conda activate networkx
     echo profiling networkx on $2...
     python $CODE $INPUT $N > $OUTPUT
+elif [[ $CODE == *"lightgraphs"* ]]; then
+    echo profiling lightgraphs on $2...
+    julia $CODE $INPUT $N > $OUTPUT
 else
     echo "Unknown code"
 fi
