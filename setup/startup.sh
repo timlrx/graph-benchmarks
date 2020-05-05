@@ -53,6 +53,6 @@ conda activate networkit
 conda install -y -c conda-forge networkit ipython
 
 ### Install Snap
-conda create --name snap
+conda create --name snap python=3.7
 conda activate snap
 pip install snap-stanford
