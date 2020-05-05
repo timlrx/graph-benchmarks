@@ -3,7 +3,7 @@ from benchmark import benchmark
 import sys
 
 filename = sys.argv[1]
-n = sys.argv[2]
+n = int(sys.argv[2])
 
 engineering.setNumberOfThreads(16)
 print(f"Profiling dataset {filename}")

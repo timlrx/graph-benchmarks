@@ -3,7 +3,7 @@ from benchmark import benchmark
 import sys
 
 filename = sys.argv[1]
-n = sys.argv[2]
+n = int(sys.argv[2])
 
 if (filename == "pokec"):
     nodeid = '1'
