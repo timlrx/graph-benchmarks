@@ -1,5 +1,5 @@
 from igraph import *
-import cProfile
+from benchmark import benchmark
 import sys
 
 filename = sys.argv[1]
@@ -11,28 +11,29 @@ print("Profiling loading")
 print("=================")
 print()
 
-cProfile.run(f'''for i in range({n}): g = Graph.Read(filename, format="edges")''')
+benchmark("Graph.Read(filename, format='edges')", globals=globals(), n=n)
+g = Graph.Read(filename, format='edges')
 
 print("Profiling shortest path")
 print("=======================")
 print()
 
-cProfile.run(f"for i in range({n}): g.shortest_paths([g.vs[0]])", sort="cumulative")
+benchmark("g.shortest_paths([g.vs[0]])", globals=globals(), n=n)
 
 print("Profiling PageRank")
 print("==================")
 print()
 
-cProfile.run(f"for i in range({n}): g.pagerank(damping=0.85, eps=1e-3)", sort="cumulative")
+benchmark("g.pagerank(damping=0.85, eps=1e-3)", globals=globals(), n=n)
 
 print("Profiling k-core")
 print("================")
 print()
 
-cProfile.run(f"for i in range({n}): g.coreness(mode='all')", sort="cumulative")
+benchmark("g.coreness(mode='all')", globals=globals(), n=n)
 
 print("Profiling strongly connected components")
 print("=======================================")
 print()
 
-cProfile.run(f"for i in range({n}): g.components(mode=STRONG)", sort="cumulative")
+benchmark("g.components(mode=STRONG)", globals=globals(), n=n)

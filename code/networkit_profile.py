@@ -1,5 +1,5 @@
 from networkit import *
-import cProfile
+from benchmark import benchmark
 import sys
 
 filename = sys.argv[1]
@@ -12,28 +12,31 @@ print("Profiling loading")
 print("=================")
 print()
 
-cProfile.run(f'''for i in range({n}): g = readGraph(filename, Format.SNAP)''')
+benchmark("readGraph(filename, Format.SNAP)", globals=globals(), n=n)
+g = readGraph(filename, Format.SNAP)
 
 print("Profiling shortest path")
 print("=======================")
 print()
 
-cProfile.run(f"for i in range({n}): distance.BFS(g, 0, storePaths=False).run()", sort="cumulative")
+benchmark("distance.BFS(g, 0, storePaths=False).run()", globals=globals(), n=n)
 
 print("Profiling PageRank")
 print("==================")
 print()
 
-cProfile.run(f"for i in range({n}): centrality.PageRank(g, damp=0.85, tol=1e-3).run()", sort="cumulative")
+benchmark("centrality.PageRank(g, damp=0.85, tol=1e-3).run()",
+          globals=globals(), n=n)
 
 print("Profiling k-core")
 print("================")
 print()
 
-cProfile.run(f"for i in range({n}): centrality.CoreDecomposition(g).run()", sort="cumulative")
+benchmark("centrality.CoreDecomposition(g).run()", globals=globals(), n=n)
 
 print("Profiling strongly connected components")
 print("=======================================")
 print()
 
-cProfile.run(f"for i in range({n}): components.StronglyConnectedComponents(g).run()", sort="cumulative")
+benchmark("components.StronglyConnectedComponents(g).run()",
+          globals=globals(), n=n)
