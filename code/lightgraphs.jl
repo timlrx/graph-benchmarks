@@ -19,6 +19,7 @@ using GraphIO
 using SortingAlgorithms: RadixSort
 f = ARGS[1]
 n = parse(Int, ARGS[2])
+s = 300
 
 println("using $(Base.Threads.nthreads()) threads")
 
@@ -30,41 +31,41 @@ println("loaded $g")
 println("\n")
 
 println("shortest paths: with path data")
-show(stdout, MIME"text/plain"(), @benchmark b = shortest_paths($g, 1, BFS(RadixSort)) samples = n seconds = 300)
+show(stdout, MIME"text/plain"(), @benchmark b = shortest_paths($g, 1, BFS(RadixSort)) samples = n seconds = s)
 println("\n")
 
 println("shortest paths: threaded, with path data")
-show(stdout, MIME"text/plain"(), @benchmark b = shortest_paths($g, 1, ThreadedBFS()) samples = n seconds = 300)
+show(stdout, MIME"text/plain"(), @benchmark b = shortest_paths($g, 1, ThreadedBFS()) samples = n seconds = s)
 println("\n")
 
 println("shortest paths: distances only")
-show(stdout, MIME"text/plain"(), @benchmark b = distances($g, 1, BreadthFirst(sort_alg=RadixSort)) samples = n seconds = 300)
+show(stdout, MIME"text/plain"(), @benchmark b = distances($g, 1, BreadthFirst(sort_alg=RadixSort)) samples = n seconds = s)
 println("\n")
 
 println("shortest paths: threaded, distances only")
-show(stdout, MIME"text/plain"(), @benchmark b = distances($g, 1, ThreadedBreadthFirst()) samples = n seconds = 300)
+show(stdout, MIME"text/plain"(), @benchmark b = distances($g, 1, ThreadedBreadthFirst()) samples = n seconds = s)
 println("\n")
 
 println("pagerank")
-show(stdout, MIME"text/plain"(), @benchmark centrality($g, PageRank(0.85, 10000000, 1e-3)) samples = n seconds = 300)
+show(stdout, MIME"text/plain"(), @benchmark centrality($g, PageRank(0.85, 10000000, 1e-3)) samples = n seconds = s)
 println("\n")
 
 # note: this might not be as performant because BLAS is inherently multi-threaded.
 println("pagerank: threaded")
 nb = ccall((:openblas_get_num_threads64_, Base.libblas_name), Cint, ())
 BLAS.set_num_threads(1)
-show(stdout, MIME"text/plain"(), @benchmark centrality($g, ThreadedPageRank(0.85, 10000000, 1e-3)) samples = n seconds = 300)
+show(stdout, MIME"text/plain"(), @benchmark centrality($g, ThreadedPageRank(0.85, 10000000, 1e-3)) samples = n seconds = s)
 BLAS.set_num_threads(nb)
 println("\n")
 
 println("core_number")
-show(stdout, MIME"text/plain"(), @benchmark core_number($g) samples = n seconds = 300)
+show(stdout, MIME"text/plain"(), @benchmark core_number($g) samples = n seconds = s)
 println("\n")
 
 println("core_number: threaded")
-show(stdout, MIME"text/plain"(), @benchmark core_number($g, KabirMadduri()) samples = n seconds = 300)
+show(stdout, MIME"text/plain"(), @benchmark core_number($g, KabirMadduri()) samples = n seconds = s)
 println("\n")
 
 println("scc: Tarjan")
-show(stdout, MIME"text/plain"(), @benchmark connected_components($g) samples = n seconds = 300)
+show(stdout, MIME"text/plain"(), @benchmark connected_components($g) samples = n seconds = s)
 println("\n")
