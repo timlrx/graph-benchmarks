@@ -29,7 +29,10 @@ source /etc/profile
 conda activate
 
 ### Install LightGraphs
-julia -e 'using Pkg; Pkg.add.("LightGraphs")'
+julia -e 'using Pkg; Pkg.add.("BenchmarkTools")'
+julia -e 'using Pkg; Pkg.develop.("LightGraphs")'
+julia -e 'using Pkg; Pkg.add.("GraphIO")'
+julia -e 'using Pkg; Pkg.add.("SortingAlgorithms")'
 
 ### Install Igraph
 conda create --name igraph
