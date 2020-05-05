@@ -18,7 +18,7 @@ cd /opt
 wget -nv 'https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh' -O conda.sh \
     && bash conda.sh -b -p /opt/conda \
     && rm conda.sh \
-    && echo 'PATH=$PATH:/opt/conda/bin' >> /etc/profile
+    && sudo ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
 
 ### Install Julia 
 wget -nv https://julialang-s3.julialang.org/bin/linux/x64/1.4/julia-1.4.1-linux-x86_64.tar.gz -O julia.tar.gz \
@@ -26,7 +26,7 @@ wget -nv https://julialang-s3.julialang.org/bin/linux/x64/1.4/julia-1.4.1-linux-
     && echo 'PATH=$PATH:/opt/julia-1.4.1/bin' >> /etc/profile
 
 source /etc/profile
-conda init
+conda activate
 
 ### Install LightGraphs
 julia -e 'using Pkg; Pkg.add.("LightGraphs")'
