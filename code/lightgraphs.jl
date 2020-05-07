@@ -19,7 +19,7 @@ using GraphIO
 using SortingAlgorithms: RadixSort
 f = ARGS[1]
 n = parse(Int, ARGS[2])
-s = 300
+s = 120
 
 println("using $(Base.Threads.nthreads()) threads")
 
