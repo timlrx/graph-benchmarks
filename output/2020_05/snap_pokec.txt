@@ -1,0 +1,79 @@
+Profiling dataset data/pokec.txt
+Profiling loading
+=================
+
+Function: snap.LoadEdgeListStr(snap.PNGraph, filename, 0, 1)
+  --------------
+  Min:      57.45782847800001
+  Median:   60.260639273998095
+  Mean:     59.70641990510012
+  Stdev:    1.268361527253759
+  Max:      60.958210097996925
+  --------------
+  samples:  10
+
+Profiling 2-hops
+================
+
+Function: snap.GetNodesAtHop(g, 0, 2, NodeVec, True)
+  --------------
+  Min:      0.004289155000151368
+  Median:   0.008480865000819904
+  Mean:     0.015191519500513095
+  Stdev:    0.025125829248558818
+  Max:      0.08632222300002468
+  --------------
+  samples:  10
+
+Profiling shortest path
+=======================
+
+Function: snap.GetShortPath(g, 0, NIdToDistH, True)
+  --------------
+  Min:      3.5123745429991686
+  Median:   3.6192832805008948
+  Mean:     3.6875116049002825
+  Stdev:    0.18323752799266146
+  Max:      4.056966944001033
+  --------------
+  samples:  10
+
+Profiling PageRank
+==================
+
+Function: snap.GetPageRank(g, PRankH, 0.85, 1e-3, 10000000)
+  --------------
+  Min:      13.199372098002641
+  Median:   13.391821685499963
+  Mean:     13.403545451300307
+  Stdev:    0.12269032499527803
+  Max:      13.571964301998378
+  --------------
+  samples:  10
+
+Profiling k-core
+================
+
+Function: snap.GetKCoreNodes(g, CoreIDSzV)
+  --------------
+  Min:      8.990196014998219
+  Median:   9.040453936499034
+  Mean:     9.06597740109937
+  Stdev:    0.08365699160855809
+  Max:      9.231374602997676
+  --------------
+  samples:  10
+
+Profiling strongly connected components
+=======================================
+
+Function: snap.GetSccs(g, Components)
+  --------------
+  Min:      13.249514006998652
+  Median:   13.525343473000248
+  Mean:     13.544541074700101
+  Stdev:    0.2720640153354729
+  Max:      14.246152356001403
+  --------------
+  samples:  10
+

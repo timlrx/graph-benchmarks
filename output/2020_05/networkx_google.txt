@@ -1,0 +1,79 @@
+Profiling dataset data/google.txt
+Profiling loading
+=================
+
+Function: read_edgelist(filename, delimiter="	")
+  --------------
+  Min:      18.88526754999839
+  Median:   19.05885074749858
+  Mean:     19.049367282599633
+  Stdev:    0.13829332276243259
+  Max:      19.25639604599928
+  --------------
+  samples:  10
+
+Profiling 2-hops
+================
+
+Function: single_source_shortest_path_length(g, "0", cutoff=2)
+  --------------
+  Min:      0.008181270000932273
+  Median:   0.008364690500457073
+  Mean:     0.008458492700083298
+  Stdev:    0.0003224684506101487
+  Max:      0.0093129909982963
+  --------------
+  samples:  10
+
+Profiling shortest path
+=======================
+
+Function: shortest_path_length(g, "0")
+  --------------
+  Min:      8.361728554002184
+  Median:   8.395568181000272
+  Mean:     8.401298532500368
+  Stdev:    0.03310475023887798
+  Max:      8.445639817000483
+  --------------
+  samples:  10
+
+Profiling PageRank
+==================
+
+Function: pagerank(g, alpha=0.85, tol=1e-3, max_iter=10000000)
+  --------------
+  Min:      60.98159555700113
+  Median:   61.40058350900108
+  Mean:     61.669042604900824
+  Stdev:    0.8139377198188882
+  Max:      63.73362944499968
+  --------------
+  samples:  10
+
+Profiling k-core
+================
+
+Function: core.core_number(g)
+  --------------
+  Min:      127.0351924730021
+  Median:   128.3078677859994
+  Mean:     128.65841163149997
+  Stdev:    1.2877944901969496
+  Max:      131.06143607400008
+  --------------
+  samples:  10
+
+Profiling strongly connected components
+=======================================
+
+Function: [i for i in strongly_connected_components(g)]
+  --------------
+  Min:      14.45608667200213
+  Median:   14.526078734499606
+  Mean:     14.567955711200558
+  Stdev:    0.10718876833131818
+  Max:      14.826249574998656
+  --------------
+  samples:  10
+

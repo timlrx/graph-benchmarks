@@ -1,0 +1,81 @@
+Profiling dataset data/google.txt
+using 1 threads
+
+Profiling loading
+=================
+
+Function: load_graph_from_csv(filename, directed=False, csv_options={'delimiter': '	', 'quotechar': '"'})
+  --------------
+  Min:      11.088767021999956
+  Median:   11.294747579499926
+  Mean:     11.274354399760005
+  Stdev:    0.10759983447119016
+  Max:      11.528486715000327
+  --------------
+  samples:  100
+
+Profiling 2-hops
+================
+
+Function: shortest_distance(g, g.vertex(0), max_dist=2)
+  --------------
+  Min:      0.004222624999783875
+  Median:   0.004471446499792364
+  Mean:     0.004802267920003942
+  Stdev:    0.002671878821314633
+  Max:      0.031122509999477188
+  --------------
+  samples:  100
+
+Profiling shortest path
+=======================
+
+Function: shortest_distance(g, g.vertex(0))
+  --------------
+  Min:      0.14835107300041273
+  Median:   0.1580672885002059
+  Mean:     0.15761654190005175
+  Stdev:    0.0038373906570697757
+  Max:      0.16700441900047736
+  --------------
+  samples:  100
+
+Profiling PageRank
+==================
+
+Function: pagerank(g, damping=0.85, epsilon=1e-3, max_iter=10000000)
+  --------------
+  Min:      2.7758981570004835
+  Median:   2.9315716944997803
+  Mean:     2.931119951810042
+  Stdev:    0.05752418440365586
+  Max:      3.0408756859997084
+  --------------
+  samples:  100
+
+Profiling k-core
+================
+
+Function: kcore_decomposition(g)
+  --------------
+  Min:      0.4360403809996569
+  Median:   0.465790999499859
+  Mean:     0.4665952375499728
+  Stdev:    0.01230004952480799
+  Max:      0.4972343749996071
+  --------------
+  samples:  100
+
+Profiling strongly connected components
+=======================================
+
+Function: label_components(g, vprop=None, directed=None, attractors=False)
+  --------------
+  Min:      0.22249169899987464
+  Median:   0.2291614805003519
+  Mean:     0.23040820833003636
+  Stdev:    0.0050457230475266825
+  Max:      0.24763634400005685
+  --------------
+  samples:  100
+

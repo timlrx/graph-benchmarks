@@ -1,0 +1,81 @@
+Profiling dataset data/google.txt
+using 16 threads
+
+Profiling loading
+=================
+
+Function: load_graph_from_csv(filename, directed=False, csv_options={'delimiter': '	', 'quotechar': '"'})
+  --------------
+  Min:      10.650528767000083
+  Median:   10.81739624949995
+  Mean:     10.824298562559992
+  Stdev:    0.18390671577143558
+  Max:      12.28119476400002
+  --------------
+  samples:  100
+
+Profiling 2-hops
+================
+
+Function: shortest_distance(g, g.vertex(0), max_dist=2)
+  --------------
+  Min:      0.004031383999972604
+  Median:   0.004319021500009512
+  Mean:     0.008510537750005369
+  Stdev:    0.041208096809075064
+  Max:      0.41646345200001633
+  --------------
+  samples:  100
+
+Profiling shortest path
+=======================
+
+Function: shortest_distance(g, g.vertex(0))
+  --------------
+  Min:      0.1453893689999859
+  Median:   0.1496542339999678
+  Mean:     0.14976492276000272
+  Stdev:    0.0026655031598851794
+  Max:      0.16540813899996465
+  --------------
+  samples:  100
+
+Profiling PageRank
+==================
+
+Function: pagerank(g, damping=0.85, epsilon=1e-3, max_iter=10000000)
+  --------------
+  Min:      0.6018771869999
+  Median:   0.6204947270000503
+  Mean:     0.6274366903800115
+  Stdev:    0.022577169870298914
+  Max:      0.7792382249999719
+  --------------
+  samples:  100
+
+Profiling k-core
+================
+
+Function: kcore_decomposition(g)
+  --------------
+  Min:      0.40584397699990404
+  Median:   0.4253045865000331
+  Mean:     0.4273430314300072
+  Stdev:    0.011957917737660353
+  Max:      0.4776772999998684
+  --------------
+  samples:  100
+
+Profiling strongly connected components
+=======================================
+
+Function: label_components(g, vprop=None, directed=None, attractors=False)
+  --------------
+  Min:      0.2414389430000483
+  Median:   0.2503269820000469
+  Mean:     0.2509060345099965
+  Stdev:    0.006569910839064472
+  Max:      0.2939720409999609
+  --------------
+  samples:  100
+

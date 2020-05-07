@@ -1,0 +1,66 @@
+Profiling dataset data/amazon.txt
+Profiling loading
+=================
+
+Function: Graph.Read(filename, format='edges')
+  --------------
+  Min:      0.5840724219997355
+  Median:   0.5994989135006108
+  Mean:     0.6006970648899187
+  Stdev:    0.009722943068809959
+  Max:      0.6384372219999932
+  --------------
+  samples:  100
+
+Profiling shortest path
+=======================
+
+Function: g.shortest_paths([g.vs[0]])
+  --------------
+  Min:      0.05360978700082342
+  Median:   0.05620596150038182
+  Mean:     0.056467683769933504
+  Stdev:    0.0018069110266455532
+  Max:      0.06123665499944764
+  --------------
+  samples:  100
+
+Profiling PageRank
+==================
+
+Function: g.pagerank(damping=0.85, eps=1e-3)
+  --------------
+  Min:      0.600069028998405
+  Median:   0.6251409725000485
+  Mean:     0.6290502465099235
+  Stdev:    0.01701054581144318
+  Max:      0.6711502500002098
+  --------------
+  samples:  100
+
+Profiling k-core
+================
+
+Function: g.coreness(mode='all')
+  --------------
+  Min:      0.15696088000004238
+  Median:   0.17100581000067905
+  Mean:     0.17051646527006598
+  Stdev:    0.007404777989100519
+  Max:      0.19153213900062838
+  --------------
+  samples:  100
+
+Profiling strongly connected components
+=======================================
+
+Function: g.components(mode=STRONG)
+  --------------
+  Min:      0.19452461000037147
+  Median:   0.20894599100029154
+  Mean:     0.2081731588200819
+  Stdev:    0.006902680372194791
+  Max:      0.23839260199929413
+  --------------
+  samples:  100
+

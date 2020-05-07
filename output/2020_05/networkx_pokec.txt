@@ -1,0 +1,79 @@
+Profiling dataset data/pokec.txt
+Profiling loading
+=================
+
+Function: read_edgelist(filename, delimiter="	")
+  --------------
+  Min:      147.44500270499702
+  Median:   147.44500270499702
+  Mean:     147.44500270499702
+  Stdev:    N.A.
+  Max:      147.44500270499702
+  --------------
+  samples:  1
+
+Profiling 2-hops
+================
+
+Function: single_source_shortest_path_length(g, "1", cutoff=2)
+  --------------
+  Min:      0.027619208998657996
+  Median:   0.027619208998657996
+  Mean:     0.027619208998657996
+  Stdev:    N.A.
+  Max:      0.027619208998657996
+  --------------
+  samples:  1
+
+Profiling shortest path
+=======================
+
+Function: shortest_path_length(g, "1")
+  --------------
+  Min:      68.24613371000305
+  Median:   68.24613371000305
+  Mean:     68.24613371000305
+  Stdev:    N.A.
+  Max:      68.24613371000305
+  --------------
+  samples:  1
+
+Profiling PageRank
+==================
+
+Function: pagerank(g, alpha=0.85, tol=1e-3, max_iter=10000000)
+  --------------
+  Min:      419.86768591299915
+  Median:   419.86768591299915
+  Mean:     419.86768591299915
+  Stdev:    N.A.
+  Max:      419.86768591299915
+  --------------
+  samples:  1
+
+Profiling k-core
+================
+
+Function: core.core_number(g)
+  --------------
+  Min:      627.3589259510009
+  Median:   627.3589259510009
+  Mean:     627.3589259510009
+  Stdev:    N.A.
+  Max:      627.3589259510009
+  --------------
+  samples:  1
+
+Profiling strongly connected components
+=======================================
+
+Function: [i for i in strongly_connected_components(g)]
+  --------------
+  Min:      99.7114305460018
+  Median:   99.7114305460018
+  Mean:     99.7114305460018
+  Stdev:    N.A.
+  Max:      99.7114305460018
+  --------------
+  samples:  1
+

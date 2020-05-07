@@ -1,0 +1,79 @@
+Profiling dataset data/amazon.txt
+Profiling loading
+=================
+
+Function: read_edgelist(filename, delimiter="	")
+  --------------
+  Min:      4.905807822000497
+  Median:   4.945895504000873
+  Mean:     4.941192439700535
+  Stdev:    0.015566947623964968
+  Max:      4.960550234998664
+  --------------
+  samples:  10
+
+Profiling 2-hops
+================
+
+Function: single_source_shortest_path_length(g, "0", cutoff=2)
+  --------------
+  Min:      0.0006131959999038372
+  Median:   0.0006376125002134359
+  Mean:     0.0007136124004318845
+  Stdev:    0.00023239650391835697
+  Max:      0.001370766000036383
+  --------------
+  samples:  10
+
+Profiling shortest path
+=======================
+
+Function: shortest_path_length(g, "0")
+  --------------
+  Min:      2.336004826000135
+  Median:   2.354980654497922
+  Mean:     2.354999798299468
+  Stdev:    0.008283226474316435
+  Max:      2.366223971999716
+  --------------
+  samples:  10
+
+Profiling PageRank
+==================
+
+Function: pagerank(g, alpha=0.85, tol=1e-3, max_iter=10000000)
+  --------------
+  Min:      14.992839111000649
+  Median:   15.063614795499234
+  Mean:     15.09806382550014
+  Stdev:    0.10957626302552913
+  Max:      15.30718315500053
+  --------------
+  samples:  10
+
+Profiling k-core
+================
+
+Function: core.core_number(g)
+  --------------
+  Min:      6.456430524001917
+  Median:   6.519383923998248
+  Mean:     6.516399447500225
+  Stdev:    0.041362764975752545
+  Max:      6.590314031000162
+  --------------
+  samples:  10
+
+Profiling strongly connected components
+=======================================
+
+Function: [i for i in strongly_connected_components(g)]
+  --------------
+  Min:      3.4156825239988393
+  Median:   3.4352403094999318
+  Mean:     3.4397650994003923
+  Stdev:    0.019643482505942396
+  Max:      3.485471020001569
+  --------------
+  samples:  10
+

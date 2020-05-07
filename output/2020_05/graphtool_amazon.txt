@@ -1,0 +1,80 @@
+Profiling dataset data/amazon.txt
+using 16 threads
+Profiling loading
+=================
+
+Function: load_graph_from_csv(filename, directed=False, csv_options={'delimiter': '	', 'quotechar': '"'})
+  --------------
+  Min:      2.7692322530001547
+  Median:   2.8041226545001336
+  Mean:     2.809364157550035
+  Stdev:    0.03304429815831015
+  Max:      3.074023574000421
+  --------------
+  samples:  100
+
+Profiling 2-hops
+================
+
+Function: shortest_distance(g, g.vertex(0), max_dist=2)
+  --------------
+  Min:      0.0015252779994625598
+  Median:   0.001561107500037906
+  Mean:     0.0015879617699374648
+  Stdev:    0.00023994500586303345
+  Max:      0.003942037999877357
+  --------------
+  samples:  100
+
+Profiling shortest path
+=======================
+
+Function: shortest_distance(g, g.vertex(0))
+  --------------
+  Min:      0.047036422999553906
+  Median:   0.048569063500053744
+  Mean:     0.04872094738995656
+  Stdev:    0.0011506584391913894
+  Max:      0.056402629999865894
+  --------------
+  samples:  100
+
+Profiling PageRank
+==================
+
+Function: pagerank(g, damping=0.85, epsilon=1e-3, max_iter=10000000)
+  --------------
+  Min:      0.03914859399992565
+  Median:   0.0403210110002874
+  Mean:     0.04035594112997387
+  Stdev:    0.0005821502156142654
+  Max:      0.04298086800008605
+  --------------
+  samples:  100
+
+Profiling k-core
+================
+
+Function: kcore_decomposition(g)
+  --------------
+  Min:      0.09070218199940427
+  Median:   0.0986521609997908
+  Mean:     0.09890355073001957
+  Stdev:    0.0034193412267569637
+  Max:      0.11494874799973331
+  --------------
+  samples:  100
+
+Profiling strongly connected components
+=======================================
+
+Function: label_components(g, vprop=None, directed=None, attractors=False)
+  --------------
+  Min:      0.07249836899973161
+  Median:   0.07419283950048339
+  Mean:     0.07459889512998416
+  Stdev:    0.0014330770599839658
+  Max:      0.0815593479992458
+  --------------
+  samples:  100
+

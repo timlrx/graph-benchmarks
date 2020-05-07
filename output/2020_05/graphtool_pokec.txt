@@ -1,0 +1,80 @@
+Profiling dataset data/pokec.txt
+using 16 threads
+Profiling loading
+=================
+
+Function: load_graph_from_csv(filename, directed=False, csv_options={'delimiter': '	', 'quotechar': '"'})
+  --------------
+  Min:      75.43605172200114
+  Median:   77.03408854950067
+  Mean:     76.99284073260014
+  Stdev:    1.5047358263685349
+  Max:      80.2901410479999
+  --------------
+  samples:  10
+
+Profiling 2-hops
+================
+
+Function: shortest_distance(g, g.vertex(0), max_dist=2)
+  --------------
+  Min:      0.009638716999688768
+  Median:   0.009784590000890603
+  Mean:     0.017281174800154987
+  Stdev:    0.021039534964776382
+  Max:      0.07670805199995812
+  --------------
+  samples:  10
+
+Profiling shortest path
+=======================
+
+Function: shortest_distance(g, g.vertex(0))
+  --------------
+  Min:      0.7318842419990688
+  Median:   0.7480848785007765
+  Mean:     0.7472505306996027
+  Stdev:    0.008640235927568074
+  Max:      0.7589969099990412
+  --------------
+  samples:  10
+
+Profiling PageRank
+==================
+
+Function: pagerank(g, damping=0.85, epsilon=1e-3, max_iter=10000000)
+  --------------
+  Min:      1.8709393570006796
+  Median:   1.8889106964998064
+  Mean:     1.887980066900127
+  Stdev:    0.009302498063737844
+  Max:      1.8995955970003706
+  --------------
+  samples:  10
+
+Profiling k-core
+================
+
+Function: kcore_decomposition(g)
+  --------------
+  Min:      4.666792203999648
+  Median:   4.780424751000282
+  Mean:     4.772591854399797
+  Stdev:    0.07497061192462151
+  Max:      4.937817209998684
+  --------------
+  samples:  10
+
+Profiling strongly connected components
+=======================================
+
+Function: label_components(g, vprop=None, directed=None, attractors=False)
+  --------------
+  Min:      1.1734763019994716
+  Median:   1.2032249919993774
+  Mean:     1.1996145256001909
+  Stdev:    0.011875064780926127
+  Max:      1.214642814000399
+  --------------
+  samples:  10
+

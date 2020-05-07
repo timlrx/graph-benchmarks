@@ -1,0 +1,66 @@
+Profiling dataset data/amazon.txt
+Profiling loading
+=================
+
+Function: nk.readGraph(filename, nk.Format.SNAP)
+  --------------
+  Min:      0.5604121569995186
+  Median:   0.5955050039992784
+  Mean:     0.5957918798199535
+  Stdev:    0.01776025681789974
+  Max:      0.642425292999178
+  --------------
+  samples:  100
+
+Profiling shortest path
+=======================
+
+Function: nk.distance.BFS(g, 0, storePaths=False).run()
+  --------------
+  Min:      0.03684903900102654
+  Median:   0.03957003799951053
+  Mean:     0.040370246159945965
+  Stdev:    0.006012213077231661
+  Max:      0.09830977800083929
+  --------------
+  samples:  100
+
+Profiling PageRank
+==================
+
+Function: nk.centrality.PageRank(g, damp=0.85, tol=1e-3).run()
+  --------------
+  Min:      0.005236570999841206
+  Median:   0.005438673000753624
+  Mean:     0.005686480470067181
+  Stdev:    0.0023810993715257384
+  Max:      0.02924474400060717
+  --------------
+  samples:  100
+
+Profiling k-core
+================
+
+Function: nk.centrality.CoreDecomposition(g).run()
+  --------------
+  Min:      0.009432021999600693
+  Median:   0.009924576000230445
+  Mean:     0.009933975910007576
+  Stdev:    0.00019502069899603498
+  Max:      0.010517089000131818
+  --------------
+  samples:  100
+
+Profiling strongly connected components
+=======================================
+
+Function: nk.components.StronglyConnectedComponents(g).run()
+  --------------
+  Min:      0.09509149500081548
+  Median:   0.1048017789998994
+  Mean:     0.10531854874005148
+  Stdev:    0.007558800773752281
+  Max:      0.1681141890003346
+  --------------
+  samples:  100
+

@@ -1,0 +1,66 @@
+Profiling dataset data/pokec.txt
+Profiling loading
+=================
+
+Function: Graph.Read(filename, format='edges')
+  --------------
+  Min:      26.309170673999688
+  Median:   26.521764869499748
+  Mean:     26.516020707299685
+  Stdev:    0.14623891534031722
+  Max:      26.738833303999854
+  --------------
+  samples:  10
+
+Profiling shortest path
+=======================
+
+Function: g.shortest_paths([g.vs[0]])
+  --------------
+  Min:      0.5975351979996049
+  Median:   0.601573632000509
+  Mean:     0.6053607347997968
+  Stdev:    0.013360899652848
+  Max:      0.6430758659989806
+  --------------
+  samples:  10
+
+Profiling PageRank
+==================
+
+Function: g.pagerank(damping=0.85, eps=1e-3)
+  --------------
+  Min:      24.727351797000665
+  Median:   25.026504819000365
+  Mean:     25.153247765200103
+  Stdev:    0.33349060187151736
+  Max:      25.779687563999687
+  --------------
+  samples:  10
+
+Profiling k-core
+================
+
+Function: g.coreness(mode='all')
+  --------------
+  Min:      7.1150133770006505
+  Median:   7.229534664000312
+  Mean:     7.265429750600378
+  Stdev:    0.11862847350140178
+  Max:      7.55820721100099
+  --------------
+  samples:  10
+
+Profiling strongly connected components
+=======================================
+
+Function: g.components(mode=STRONG)
+  --------------
+  Min:      3.916732226000022
+  Median:   3.977502079500482
+  Mean:     3.9824546319003273
+  Stdev:    0.038600229484270276
+  Max:      4.053542641000604
+  --------------
+  samples:  10
+

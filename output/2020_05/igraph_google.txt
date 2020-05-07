@@ -1,0 +1,66 @@
+Profiling dataset data/google.txt
+Profiling loading
+=================
+
+Function: Graph.Read(filename, format='edges')
+  --------------
+  Min:      4.106665163999423
+  Median:   4.175595469499967
+  Mean:     4.17793700906006
+  Stdev:    0.03482069278526867
+  Max:      4.288851889999933
+  --------------
+  samples:  100
+
+Profiling shortest path
+=======================
+
+Function: g.shortest_paths([g.vs[0]])
+  --------------
+  Min:      0.43183368599966343
+  Median:   0.442403129000013
+  Mean:     0.4422953608001444
+  Stdev:    0.00497944465592418
+  Max:      0.45595831600076053
+  --------------
+  samples:  100
+
+Profiling PageRank
+==================
+
+Function: g.pagerank(damping=0.85, eps=1e-3)
+  --------------
+  Min:      2.53871443800017
+  Median:   2.5992427155006226
+  Mean:     2.600669346820032
+  Stdev:    0.022734437888564555
+  Max:      2.6600819020004565
+  --------------
+  samples:  100
+
+Profiling k-core
+================
+
+Function: g.coreness(mode='all')
+  --------------
+  Min:      0.995473076000053
+  Median:   1.0416819950005447
+  Mean:     1.0410908322100658
+  Stdev:    0.02457311856700043
+  Max:      1.0998816129995248
+  --------------
+  samples:  100
+
+Profiling strongly connected components
+=======================================
+
+Function: g.components(mode=STRONG)
+  --------------
+  Min:      1.1330137599998125
+  Median:   1.1537622089999786
+  Mean:     1.1558672252098767
+  Stdev:    0.014045452741188113
+  Max:      1.2456627410010697
+  --------------
+  samples:  100
+
