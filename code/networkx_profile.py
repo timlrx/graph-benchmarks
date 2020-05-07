@@ -5,7 +5,7 @@ import sys
 filename = sys.argv[1]
 n = int(sys.argv[2])
 
-if (filename == "pokec"):
+if ("pokec" in filename):
     nodeid = '1'
 else:
     nodeid = '0'
