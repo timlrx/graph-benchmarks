@@ -6,7 +6,9 @@ filename = sys.argv[1]
 n = int(sys.argv[2])
 
 nk.engineering.setNumberOfThreads(16)
+
 print(f"Profiling dataset {filename}")
+print(f"using {nk.getCurrentNumberOfThreads()} threads")
 
 print("Profiling loading")
 print("=================")

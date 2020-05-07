@@ -5,9 +5,10 @@ import sys
 filename = sys.argv[1]
 n = int(sys.argv[2])
 
-print(f"Profiling dataset {filename}")
-
 openmp_set_num_threads(16)
+
+print(f"Profiling dataset {filename}")
+print(f"using {openmp_get_num_threads()} threads")
 
 print("Profiling loading")
 print("=================")
