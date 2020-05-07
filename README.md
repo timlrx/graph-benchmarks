@@ -2,12 +2,12 @@
 
 A comparison of 5 different packages:
 
-- [NetworkX](https://networkx.github.io/), v2.3, Python 3.7
-- [graph-tool](https://graph-tool.skewed.de/static/doc/quickstart.html), v2.28.dev0, Python 3.7
-- [Igraph](https://igraph.org/python/), v0.7.1, Python 3.7
-- [NetworKit](https://networkit.github.io/), v5.0.1, Python 3.7
-- [SNAP](https://snap.stanford.edu/snap/), v4.1.0, Python 2.7
-- [LightGraphs](https://juliagraphs.github.io/LightGraphs.jl/latest/), v1.3.0 dev, Julia 1.3
+- [NetworkX](https://networkx.github.io/), v2.4, Python 3.7
+- [graph-tool](https://graph-tool.skewed.de/static/doc/quickstart.html), v2.31, Python 3.7
+- [Igraph](https://igraph.org/python/), v0.8.2, Python 3.7
+- [NetworKit](https://networkit.github.io/), v6.1.0, Python 3.7
+- [SNAP](https://snap.stanford.edu/snap/), v5.0.0, Python 3.7
+- [LightGraphs](https://juliagraphs.github.io/LightGraphs.jl/latest/), v1.3.2, Julia 1.4
 
 For a more detailed description of the process and results, please refer to the following [blog post](https://www.timlrx.com/2019/05/05/benchmark-of-popular-graph-network-packages/).  
 **Note**: The post has not been updated with the latest lightgraphs benchmark

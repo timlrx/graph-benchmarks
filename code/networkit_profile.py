@@ -1,39 +1,45 @@
-from networkit import *
-import cProfile
+import networkit as nk
+from benchmark import benchmark
 import sys
 
 filename = sys.argv[1]
-n = sys.argv[2]
+n = int(sys.argv[2])
 
-engineering.setNumberOfThreads(16)
+nk.engineering.setNumberOfThreads(16)
+
 print(f"Profiling dataset {filename}")
+print(f"using {nk.getCurrentNumberOfThreads()} threads")
 
 print("Profiling loading")
 print("=================")
 print()
 
-cProfile.run(f'''for i in range({n}): g = readGraph(filename, Format.SNAP)''')
+benchmark("nk.readGraph(filename, nk.Format.SNAP)", globals=globals(), n=n)
+g = nk.readGraph(filename, nk.Format.SNAP)
 
 print("Profiling shortest path")
 print("=======================")
 print()
 
-cProfile.run(f"for i in range({n}): distance.BFS(g, 0, storePaths=False).run()", sort="cumulative")
+benchmark("nk.distance.BFS(g, 0, storePaths=False).run()",
+          globals=globals(), n=n)
 
 print("Profiling PageRank")
 print("==================")
 print()
 
-cProfile.run(f"for i in range({n}): centrality.PageRank(g, damp=0.85, tol=1e-3).run()", sort="cumulative")
+benchmark("nk.centrality.PageRank(g, damp=0.85, tol=1e-3).run()",
+          globals=globals(), n=n)
 
 print("Profiling k-core")
 print("================")
 print()
 
-cProfile.run(f"for i in range({n}): centrality.CoreDecomposition(g).run()", sort="cumulative")
+benchmark("nk.centrality.CoreDecomposition(g).run()", globals=globals(), n=n)
 
 print("Profiling strongly connected components")
 print("=======================================")
 print()
 
-cProfile.run(f"for i in range({n}): components.StronglyConnectedComponents(g).run()", sort="cumulative")
+benchmark("nk.components.StronglyConnectedComponents(g).run()",
+          globals=globals(), n=n)

@@ -1,0 +1,68 @@
+Profiling dataset data/google.txt
+using 8 threads
+
+Profiling loading
+=================
+
+Function: nk.readGraph(filename, nk.Format.SNAP)
+  --------------
+  Min:      2.982775887999992
+  Median:   3.034250162999996
+  Mean:     3.041069721930005
+  Stdev:    0.0717933005140049
+  Max:      3.72664235000002
+  --------------
+  samples:  100
+
+Profiling shortest path
+=======================
+
+Function: nk.distance.BFS(g, 0, storePaths=False).run()
+  --------------
+  Min:      0.15400939900007415
+  Median:   0.16068709300003547
+  Mean:     0.16168368061999103
+  Stdev:    0.01167766983903218
+  Max:      0.27439065900000514
+  --------------
+  samples:  100
+
+Profiling PageRank
+==================
+
+Function: nk.centrality.PageRank(g, damp=0.85, tol=1e-3).run()
+  --------------
+  Min:      0.10505609799997728
+  Median:   0.1325630874999888
+  Mean:     0.13313086760000034
+  Stdev:    0.009298067300192977
+  Max:      0.17300731699992866
+  --------------
+  samples:  100
+
+Profiling k-core
+================
+
+Function: nk.centrality.CoreDecomposition(g).run()
+  --------------
+  Min:      0.0673861500000612
+  Median:   0.07813900249999506
+  Mean:     0.0782148840700006
+  Stdev:    0.004564057350547525
+  Max:      0.08835378899993884
+  --------------
+  samples:  100
+
+Profiling strongly connected components
+=======================================
+
+Function: nk.components.StronglyConnectedComponents(g).run()
+  --------------
+  Min:      0.3565592979999792
+  Median:   0.367897830000004
+  Mean:     0.3690305655600025
+  Stdev:    0.007568300088074673
+  Max:      0.431561108999972
+  --------------
+  samples:  100
+

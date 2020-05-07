@@ -1,0 +1,81 @@
+Profiling dataset data/google.txt
+using 8 threads
+
+Profiling loading
+=================
+
+Function: load_graph_from_csv(filename, directed=False, csv_options={'delimiter': '	', 'quotechar': '"'})
+  --------------
+  Min:      11.329343633000008
+  Median:   11.41230759699988
+  Mean:     11.441273929450013
+  Stdev:    0.07410534270141912
+  Max:      11.64425834900021
+  --------------
+  samples:  100
+
+Profiling 2-hops
+================
+
+Function: shortest_distance(g, g.vertex(0), max_dist=2)
+  --------------
+  Min:      0.004208071999983076
+  Median:   0.004515540000056717
+  Mean:     0.00476773095002045
+  Stdev:    0.0024844747076301827
+  Max:      0.029313652999917394
+  --------------
+  samples:  100
+
+Profiling shortest path
+=======================
+
+Function: shortest_distance(g, g.vertex(0))
+  --------------
+  Min:      0.14533243899995796
+  Median:   0.1533055540000987
+  Mean:     0.1530298666200224
+  Stdev:    0.0038513331700361112
+  Max:      0.1627787789998365
+  --------------
+  samples:  100
+
+Profiling PageRank
+==================
+
+Function: pagerank(g, damping=0.85, epsilon=1e-3, max_iter=10000000)
+  --------------
+  Min:      0.6731731310001123
+  Median:   0.6948331170001438
+  Mean:     0.702601765430004
+  Stdev:    0.023671572817269382
+  Max:      0.7872473620000164
+  --------------
+  samples:  100
+
+Profiling k-core
+================
+
+Function: kcore_decomposition(g)
+  --------------
+  Min:      0.447932614000365
+  Median:   0.4834348660001524
+  Mean:     0.4848838981600329
+  Stdev:    0.017885242836733834
+  Max:      0.5354900679999446
+  --------------
+  samples:  100
+
+Profiling strongly connected components
+=======================================
+
+Function: label_components(g, vprop=None, directed=None, attractors=False)
+  --------------
+  Min:      0.225990826999805
+  Median:   0.27850903299986385
+  Mean:     0.2806495536700004
+  Stdev:    0.04247102350859447
+  Max:      0.35561917299992274
+  --------------
+  samples:  100
+

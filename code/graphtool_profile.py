@@ -1,46 +1,53 @@
 from graph_tool.all import *
-import cProfile
+from benchmark import benchmark
 import sys
 
 filename = sys.argv[1]
-n = sys.argv[2]
-
-print(f"Profiling dataset {filename}")
+n = int(sys.argv[2])
 
 openmp_set_num_threads(16)
+
+print(f"Profiling dataset {filename}")
+print(f"using {openmp_get_num_threads()} threads")
 
 print("Profiling loading")
 print("=================")
 print()
 
-cProfile.run(f'''for i in range({n}): g = load_graph_from_csv(filename, directed=False, csv_options={{'delimiter': '\t', 'quotechar': '"'}})''')
+benchmark(
+    '''load_graph_from_csv(filename, directed=False, csv_options={'delimiter': '\t', 'quotechar': '"'})''', globals=globals(), n=n)
+g = load_graph_from_csv(filename, directed=False, csv_options={
+                        'delimiter': '\t', 'quotechar': '"'})
 
 print("Profiling 2-hops")
 print("================")
 print()
 
-cProfile.run(f"for i in range({n}): shortest_distance(g, g.vertex(0), max_dist=2)", sort="cumulative")
+benchmark(
+    "shortest_distance(g, g.vertex(0), max_dist=2)", globals=globals(), n=n)
 
 print("Profiling shortest path")
 print("=======================")
 print()
 
-cProfile.run(f"for i in range({n}): shortest_distance(g, g.vertex(0))", sort="cumulative")
+benchmark("shortest_distance(g, g.vertex(0))", globals=globals(), n=n)
 
 print("Profiling PageRank")
 print("==================")
 print()
 
-cProfile.run(f"for i in range({n}): pagerank(g, damping=0.85, epsilon=1e-3, max_iter=10000000)", sort="cumulative")
+benchmark('pagerank(g, damping=0.85, epsilon=1e-3, max_iter=10000000)',
+          globals=globals(), n=n)
 
 print("Profiling k-core")
 print("================")
 print()
 
-cProfile.run(f"for i in range({n}): kcore_decomposition(g)", sort="cumulative")
+benchmark('kcore_decomposition(g)', globals=globals(), n=n)
 
 print("Profiling strongly connected components")
 print("=======================================")
 print()
 
-cProfile.run(f"for i in range({n}): label_components(g, vprop=None, directed=None, attractors=False)", sort="cumulative")
+benchmark('label_components(g, vprop=None, directed=None, attractors=False)',
+          globals=globals(), n=n)

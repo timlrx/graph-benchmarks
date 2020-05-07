@@ -1,11 +1,11 @@
 from networkx import *
-import cProfile
+from benchmark import benchmark
 import sys
 
 filename = sys.argv[1]
-n = sys.argv[2]
+n = int(sys.argv[2])
 
-if (filename=="pokec"):
+if ("pokec" in filename):
     nodeid = '1'
 else:
     nodeid = '0'
@@ -16,35 +16,39 @@ print("Profiling loading")
 print("=================")
 print()
 
-cProfile.run(f'''for i in range({n}): g = read_edgelist(filename, delimiter="\t")''')
+benchmark('read_edgelist(filename, delimiter="\t")', globals=globals(), n=n)
+g = read_edgelist(filename, delimiter="\t")
 g = g.to_directed()
 
 print("Profiling 2-hops")
 print("================")
 print()
 
-cProfile.run(f"for i in range({n}): nx.single_source_shortest_path_length(g, '{nodeid}', cutoff=2)", sort="cumulative")
+benchmark(
+    f'single_source_shortest_path_length(g, "{nodeid}", cutoff=2)', globals=globals(), n=n)
 
 print("Profiling shortest path")
 print("=======================")
 print()
 
-cProfile.run(f"for i in range({n}): shortest_path_length(g, '{nodeid}')", sort="cumulative")
+benchmark(f'shortest_path_length(g, "{nodeid}")', globals=globals(), n=n)
 
 print("Profiling PageRank")
 print("==================")
 print()
 
-cProfile.run(f"for i in range({n}): pagerank(g, alpha=0.85, tol=1e-3, max_iter=10000000)", sort="cumulative")
+benchmark('pagerank(g, alpha=0.85, tol=1e-3, max_iter=10000000)',
+          globals=globals(), n=n)
 
 print("Profiling k-core")
 print("================")
 print()
 
-cProfile.run(f"for i in range({n}): core.core_number(g)", sort="cumulative")
+benchmark('core.core_number(g)', globals=globals(), n=n)
 
 print("Profiling strongly connected components")
 print("=======================================")
 print()
 
-cProfile.run(f"for i in range({n}): [i for i in strongly_connected_components(g)]", sort="cumulative")
+benchmark('[i for i in strongly_connected_components(g)]',
+          globals=globals(), n=n)

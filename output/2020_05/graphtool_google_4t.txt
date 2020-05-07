@@ -1,0 +1,81 @@
+Profiling dataset data/google.txt
+using 4 threads
+
+Profiling loading
+=================
+
+Function: load_graph_from_csv(filename, directed=False, csv_options={'delimiter': '	', 'quotechar': '"'})
+  --------------
+  Min:      10.940650700000333
+  Median:   11.05544658250028
+  Mean:     11.11164892361002
+  Stdev:    0.14943217180311277
+  Max:      11.674596849999944
+  --------------
+  samples:  100
+
+Profiling 2-hops
+================
+
+Function: shortest_distance(g, g.vertex(0), max_dist=2)
+  --------------
+  Min:      0.004055104000144638
+  Median:   0.004280323999864777
+  Mean:     0.004537124669950572
+  Stdev:    0.0023836225711615
+  Max:      0.028100065000217
+  --------------
+  samples:  100
+
+Profiling shortest path
+=======================
+
+Function: shortest_distance(g, g.vertex(0))
+  --------------
+  Min:      0.14625038499980292
+  Median:   0.15193824449988824
+  Mean:     0.15199704363999444
+  Stdev:    0.0032277523280863736
+  Max:      0.16077343899996777
+  --------------
+  samples:  100
+
+Profiling PageRank
+==================
+
+Function: pagerank(g, damping=0.85, epsilon=1e-3, max_iter=10000000)
+  --------------
+  Min:      1.0864391880004405
+  Median:   1.114242330500474
+  Mean:     1.1174427463900976
+  Stdev:    0.016937226857885304
+  Max:      1.1684410930001832
+  --------------
+  samples:  100
+
+Profiling k-core
+================
+
+Function: kcore_decomposition(g)
+  --------------
+  Min:      0.4120907679998709
+  Median:   0.43441818099972807
+  Mean:     0.4352850870799739
+  Stdev:    0.012604513915938373
+  Max:      0.4703313669997442
+  --------------
+  samples:  100
+
+Profiling strongly connected components
+=======================================
+
+Function: label_components(g, vprop=None, directed=None, attractors=False)
+  --------------
+  Min:      0.22546315300041897
+  Median:   0.2326318430000356
+  Mean:     0.23389482367001618
+  Stdev:    0.005268444201639116
+  Max:      0.2482877809998172
+  --------------
+  samples:  100
+

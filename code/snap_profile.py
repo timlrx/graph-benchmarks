@@ -1,50 +1,52 @@
-import sys
-sys.path.append('snap-4.1.0-4.1-centos6.5-x64-py2.6')
 import snap
-import cProfile
+from benchmark import benchmark
+import sys
 
 filename = sys.argv[1]
 n = int(sys.argv[2])
 
-print("Profiling dataset {}".format(filename))
+print(f"Profiling dataset {filename}")
 
 print("Profiling loading")
 print("=================")
 print()
 
-cProfile.run('''for i in range({}): g = snap.LoadEdgeListStr(snap.PNGraph, "{}", 0, 1)'''.format(n, filename))
+benchmark("snap.LoadEdgeListStr(snap.PNGraph, filename, 0, 1)",
+          globals=globals(), n=n)
+g = snap.LoadEdgeListStr(snap.PNGraph, filename, 0, 1)
 
 print("Profiling 2-hops")
 print("================")
 print()
 
 NodeVec = snap.TIntV()
-cProfile.run("for i in range({}): snap.GetNodesAtHop(g, 0, 2, NodeVec, True)".format(n), sort="cumulative")
+benchmark("snap.GetNodesAtHop(g, 0, 2, NodeVec, True)", globals=globals(), n=n)
 
 print("Profiling shortest path")
 print("=======================")
 print()
 
 NIdToDistH = snap.TIntH()
-cProfile.run("for i in range({}): snap.GetShortPath(g, 0, NIdToDistH, True)".format(n), sort="cumulative")
+benchmark("snap.GetShortPath(g, 0, NIdToDistH, True)", globals=globals(), n=n)
 
 print("Profiling PageRank")
 print("==================")
 print()
 
 PRankH = snap.TIntFltH()
-cProfile.run("for i in range(n): snap.GetPageRank(g, PRankH, 0.85, 1e-3, 10000000)".format(n), sort="cumulative")
+benchmark("snap.GetPageRank(g, PRankH, 0.85, 1e-3, 10000000)",
+          globals=globals(), n=n)
 
 print("Profiling k-core")
 print("================")
 print()
 
 CoreIDSzV = snap.TIntPrV()
-cProfile.run("for i in range(n): snap.GetKCoreNodes(g, CoreIDSzV)".format(n), sort="cumulative")
+benchmark("snap.GetKCoreNodes(g, CoreIDSzV)", globals=globals(), n=n)
 
 print("Profiling strongly connected components")
 print("=======================================")
 print()
 
 Components = snap.TCnComV()
-cProfile.run("for i in range(n): snap.GetSccs(g, Components)".format(n), sort="cumulative")
+benchmark("snap.GetSccs(g, Components)", globals=globals(), n=n)
