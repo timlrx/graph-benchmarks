@@ -9,7 +9,8 @@ def benchmark(stmt, n, globals):
     print(f'  Min:      {min(times)}')
     print(f'  Median:   {statistics.median(times)}')
     print(f'  Mean:     {statistics.mean(times)}')
-    print(f'  Stdev:    {statistics.stdev(times)}')
+    print(
+        f'  Stdev:    {statistics.stdev(times) if len(times) > 1 else "N.A."}')
     print(f'  Max:      {max(times)}')
     print('  --------------')
     print(f'  samples:  {len(times)}')
