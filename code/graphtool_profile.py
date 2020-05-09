@@ -15,8 +15,8 @@ print("=================")
 print()
 
 benchmark(
-    '''load_graph_from_csv(filename, directed=False, csv_options={'delimiter': '\t', 'quotechar': '"'})''', globals=globals(), n=n)
-g = load_graph_from_csv(filename, directed=False, csv_options={
+    '''load_graph_from_csv(filename, directed=True, csv_options={'delimiter': '\t', 'quotechar': '"'})''', globals=globals(), n=n)
+g = load_graph_from_csv(filename, directed=True, csv_options={
                         'delimiter': '\t', 'quotechar': '"'})
 
 print("Profiling 2-hops")
