@@ -24,30 +24,30 @@ print("================")
 print()
 
 benchmark(
-    "shortest_distance(g, g.vertex(0), max_dist=2)", globals=globals(), n=n)
+    "shortest_distance(g, g.vertex(0), max_dist=2).a", globals=globals(), n=n)
 
 print("Profiling shortest path")
 print("=======================")
 print()
 
-benchmark("shortest_distance(g, g.vertex(0))", globals=globals(), n=n)
+benchmark("shortest_distance(g, g.vertex(0)).a", globals=globals(), n=n)
 
 print("Profiling PageRank")
 print("==================")
 print()
 
-benchmark('pagerank(g, damping=0.85, epsilon=1e-3, max_iter=10000000)',
+benchmark('pagerank(g, damping=0.85, epsilon=1e-3, max_iter=10000000).a',
           globals=globals(), n=n)
 
 print("Profiling k-core")
 print("================")
 print()
 
-benchmark('kcore_decomposition(g)', globals=globals(), n=n)
+benchmark('kcore_decomposition(g).a', globals=globals(), n=n)
 
 print("Profiling strongly connected components")
 print("=======================================")
 print()
 
-benchmark('label_components(g, vprop=None, directed=None, attractors=False)',
+benchmark('cc, _ = label_components(g, vprop=None, directed=True, attractors=False); cc.a',
           globals=globals(), n=n)
