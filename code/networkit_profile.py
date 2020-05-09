@@ -21,7 +21,7 @@ print()
 
 benchmark("nk.graphio.EdgeListReader(separator='\t', firstNode=0, continuous=True, directed =True).read(filename)", globals=globals(), n=n)
 g = nk.graphio.EdgeListReader(
-    separator="\t", firstNode=1, continuous=True, directed=True).read(filename)
+    separator="\t", firstNode=nodeid, continuous=True, directed=True).read(filename)
 
 print("Profiling shortest path")
 print("=======================")
