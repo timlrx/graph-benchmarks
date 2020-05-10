@@ -2,39 +2,39 @@ Profiling dataset data/google.txt
 Profiling loading
 =================
 
-Function: read_edgelist(filename, delimiter="	")
+Function: read_edgelist(filename, delimiter="	", nodetype=int, create_using=nx.DiGraph())
   --------------
-  Min:      18.88526754999839
-  Median:   19.05885074749858
-  Mean:     19.049367282599633
-  Stdev:    0.13829332276243259
-  Max:      19.25639604599928
+  Min:      19.2015712299999
+  Median:   19.23596179949982
+  Mean:     19.286638925699844
+  Stdev:    0.1606512677533803
+  Max:      19.732456725000702
   --------------
   samples:  10
 
 Profiling 2-hops
 ================
 
-Function: single_source_shortest_path_length(g, "0", cutoff=2)
+Function: single_source_shortest_path_length(g, 0, cutoff=2)
   --------------
-  Min:      0.008181270000932273
-  Median:   0.008364690500457073
-  Mean:     0.008458492700083298
-  Stdev:    0.0003224684506101487
-  Max:      0.0093129909982963
+  Min:      0.00015869100025156513
+  Median:   0.0001614735001567169
+  Mean:     0.00017340000003969181
+  Stdev:    3.173370409851658e-05
+  Max:      0.0002618279995658668
   --------------
   samples:  10
 
 Profiling shortest path
 =======================
 
-Function: shortest_path_length(g, "0")
+Function: shortest_path_length(g, 0)
   --------------
-  Min:      8.361728554002184
-  Median:   8.395568181000272
-  Mean:     8.401298532500368
-  Stdev:    0.03310475023887798
-  Max:      8.445639817000483
+  Min:      3.4014729909995367
+  Median:   3.413994727500267
+  Mean:     3.4119877758999793
+  Stdev:    0.006877801155805234
+  Max:      3.4221178830002827
   --------------
   samples:  10
 
@@ -43,11 +43,11 @@ Profiling PageRank
 
 Function: pagerank(g, alpha=0.85, tol=1e-3, max_iter=10000000)
   --------------
-  Min:      60.98159555700113
-  Median:   61.40058350900108
-  Mean:     61.669042604900824
-  Stdev:    0.8139377198188882
-  Max:      63.73362944499968
+  Min:      33.45863115799966
+  Median:   33.50166487849992
+  Mean:     33.58222837819994
+  Stdev:    0.25204267198366065
+  Max:      34.294401406999896
   --------------
   samples:  10
 
@@ -56,11 +56,11 @@ Profiling k-core
 
 Function: core.core_number(g)
   --------------
-  Min:      127.0351924730021
-  Median:   128.3078677859994
-  Mean:     128.65841163149997
-  Stdev:    1.2877944901969496
-  Max:      131.06143607400008
+  Min:      41.20689246699931
+  Median:   42.604060192998986
+  Mean:     42.5861449846996
+  Stdev:    1.021007737439707
+  Max:      44.04261998599941
   --------------
   samples:  10
 
@@ -69,11 +69,11 @@ Profiling strongly connected components
 
 Function: [i for i in strongly_connected_components(g)]
   --------------
-  Min:      14.45608667200213
-  Median:   14.526078734499606
-  Mean:     14.567955711200558
-  Stdev:    0.10718876833131818
-  Max:      14.826249574998656
+  Min:      7.748128212000665
+  Median:   7.7654801799999404
+  Mean:     7.770186527000442
+  Stdev:    0.014167579521712612
+  Max:      7.792949709999448
   --------------
   samples:  10
 

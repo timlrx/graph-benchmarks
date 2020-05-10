@@ -1,66 +1,67 @@
 Profiling dataset data/amazon.txt
+using 16 threads
 Profiling loading
 =================
 
-Function: nk.readGraph(filename, nk.Format.SNAP)
+Function: nk.graphio.EdgeListReader(separator='	', firstNode=0, continuous=True, directed =True).read(filename)
   --------------
-  Min:      0.5604121569995186
-  Median:   0.5955050039992784
-  Mean:     0.5957918798199535
-  Stdev:    0.01776025681789974
-  Max:      0.642425292999178
+  Min:      0.9352583090003463
+  Median:   0.9813095065019297
+  Mean:     0.9831247495799835
+  Stdev:    0.010027827967466105
+  Max:      1.014244989000872
   --------------
   samples:  100
 
 Profiling shortest path
 =======================
 
-Function: nk.distance.BFS(g, 0, storePaths=False).run()
+Function: nk.distance.BFS(g, 0, storePaths=False).run().getDistances(False)
   --------------
-  Min:      0.03684903900102654
-  Median:   0.03957003799951053
-  Mean:     0.040370246159945965
-  Stdev:    0.006012213077231661
-  Max:      0.09830977800083929
+  Min:      0.034922147999168374
+  Median:   0.03697410650056554
+  Mean:     0.03759203455003444
+  Stdev:    0.002074438166962877
+  Max:      0.04549126300116768
   --------------
   samples:  100
 
 Profiling PageRank
 ==================
 
-Function: nk.centrality.PageRank(g, damp=0.85, tol=1e-3).run()
+Function: nk.centrality.PageRank(g, damp=0.85, tol=1e-3).run().scores()
   --------------
-  Min:      0.005236570999841206
-  Median:   0.005438673000753624
-  Mean:     0.005686480470067181
-  Stdev:    0.0023810993715257384
-  Max:      0.02924474400060717
+  Min:      0.014611743001296418
+  Median:   0.015024817501398502
+  Mean:     0.016040626450012495
+  Stdev:    0.002073637727105738
+  Max:      0.02513923899823567
   --------------
   samples:  100
 
 Profiling k-core
 ================
 
-Function: nk.centrality.CoreDecomposition(g).run()
+Function: nk.centrality.CoreDecomposition(g).run().scores()
   --------------
-  Min:      0.009432021999600693
-  Median:   0.009924576000230445
-  Mean:     0.009933975910007576
-  Stdev:    0.00019502069899603498
-  Max:      0.010517089000131818
+  Min:      0.1405683040029544
+  Median:   0.14633477449933707
+  Mean:     0.14739501486990775
+  Stdev:    0.004617963279933985
+  Max:      0.1696533879985509
   --------------
   samples:  100
 
 Profiling strongly connected components
 =======================================
 
-Function: nk.components.StronglyConnectedComponents(g).run()
+Function: nk.components.StronglyConnectedComponents(g).run().getPartition().getVector()
   --------------
-  Min:      0.09509149500081548
-  Median:   0.1048017789998994
-  Mean:     0.10531854874005148
-  Stdev:    0.007558800773752281
-  Max:      0.1681141890003346
+  Min:      0.0818892200004484
+  Median:   0.08652802150027128
+  Mean:     0.08689363183038949
+  Stdev:    0.002495440675969259
+  Max:      0.09372310199978529
   --------------
   samples:  100
 
