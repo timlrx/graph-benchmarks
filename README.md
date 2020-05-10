@@ -9,7 +9,7 @@ A comparison of 5 different packages:
 - [SNAP](https://snap.stanford.edu/snap/), v5.0.0, Python 3.7
 - [LightGraphs](https://juliagraphs.github.io/LightGraphs.jl/latest/), v2.0-dev, Julia 1.4
 
-For a more detailed description of the process and results, please refer to the following [blog post](https://www.timlrx.com/2019/05/05/benchmark-of-popular-graph-network-packages/).
+For a more detailed description of the process and results, please refer to the following [blog post](https://www.timlrx.com/2020/05/10/benchmark-of-popular-graph-network-packages-v2/).
 
 ## Results
 
@@ -19,23 +19,7 @@ Each algorithm was run 100 times on the Amazon and Google dataset and 10 times o
 
 The median run time is shown in the table below. Due to differences in profiling techniques and code implementation, the results may differ. Please refer to the respective code bases for implementation details.
 
-| Dataset | Algorithm            | graph-tool | Igraph | NetworKit | NetworkX | SNAP  | LightGraphs |
-| ------- | -------------------- | ---------- | ------ | --------- | -------- | ----- | ----------- |
-| Amazon  | connected components | 0.09       | 0.48   | 0.21      | 5.94     | 0.40  | 0.10        |
-| Amazon  | k-core number        | 0.11       | 0.33   | 0.01      | 8.62     | 0.42  | 0.43        |
-| Amazon  | loading              | 5.00       | 0.79   | 3.27      | 9.96     | 1.90  | 5.34        |
-| Amazon  | page rank            | 0.05       | 1.59   | 0.01      | 25.71    | 0.90  | 0.02        |
-| Amazon  | shortest path        | 0.06       | 0.12   | 0.32      | 3.31     | 0.14  | 0.03        |
-| Google  | connected components | 0.32       | 2.23   | 0.65      | 21.71    | 2.02  | 0.38        |
-| Google  | k-core number        | 0.57       | 1.68   | 0.06      | 153.21   | 1.57  | 1.98        |
-| Google  | loading              | 67.27      | 5.51   | 17.94     | 39.69    | 9.03  | 17.96       |
-| Google  | page rank            | 0.76       | 5.24   | 0.12      | 106.49   | 4.16  | 0.08        |
-| Google  | shortest path        | 0.20       | 0.69   | 0.98      | 12.33    | 0.30  | 0.09        |
-| Pokec   | connected components | 1.35       | 17.75  | 4.69      | 108.07   | 15.28 | 1.57        |
-| Pokec   | k-core number        | 5.73       | 10.87  | 0.34      | 649.81   | 8.87  | 11.11       |
-| Pokec   | loading              | 119.57     | 34.53  | 157.61    | 237.72   | 59.75 | 167.19      |
-| Pokec   | page rank            | 1.74       | 59.55  | 0.20      | 611.24   | 19.52 | 0.49        |
-| Pokec   | shortest path        | 0.86       | 0.87   | 6.87      | 67.15    | 3.09  | 0.26        |
+![](runtime_results.png)
 
 ## Setup
 
