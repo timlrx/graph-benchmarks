@@ -1,6 +1,7 @@
 using 1 threads
+
 loadgraph
- 16.777644 seconds (79.12 M allocations: 3.920 GiB, 31.85% gc time)
+ 17.125437 seconds (79.12 M allocations: 3.920 GiB, 31.76% gc time)
 loaded {875713, 5105039} directed simple UInt32 graph
 
 
@@ -9,10 +10,10 @@ BenchmarkTools.Trial:
   memory estimate:  18.01 MiB
   allocs estimate:  248
   --------------
-  minimum time:     78.198 ms (0.00% GC)
-  median time:      83.374 ms (0.00% GC)
-  mean time:        83.954 ms (0.18% GC)
-  maximum time:     91.594 ms (0.00% GC)
+  minimum time:     82.163 ms (0.00% GC)
+  median time:      85.882 ms (0.00% GC)
+  mean time:        87.635 ms (0.19% GC)
+  maximum time:     127.932 ms (0.00% GC)
   --------------
   samples:          100
   evals/sample:     1
@@ -22,10 +23,10 @@ BenchmarkTools.Trial:
   memory estimate:  14.23 MiB
   allocs estimate:  283
   --------------
-  minimum time:     96.271 ms (0.00% GC)
-  median time:      101.042 ms (0.00% GC)
-  mean time:        101.726 ms (0.10% GC)
-  maximum time:     110.274 ms (0.00% GC)
+  minimum time:     99.414 ms (0.00% GC)
+  median time:      103.106 ms (0.00% GC)
+  mean time:        103.191 ms (0.10% GC)
+  maximum time:     111.090 ms (0.00% GC)
   --------------
   samples:          100
   evals/sample:     1
@@ -35,10 +36,10 @@ BenchmarkTools.Trial:
   memory estimate:  14.67 MiB
   allocs estimate:  243
   --------------
-  minimum time:     81.675 ms (0.00% GC)
-  median time:      86.064 ms (0.00% GC)
-  mean time:        86.132 ms (0.16% GC)
-  maximum time:     91.095 ms (0.00% GC)
+  minimum time:     77.270 ms (0.00% GC)
+  median time:      80.155 ms (0.00% GC)
+  mean time:        80.350 ms (0.20% GC)
+  maximum time:     84.413 ms (0.00% GC)
   --------------
   samples:          100
   evals/sample:     1
@@ -48,10 +49,10 @@ BenchmarkTools.Trial:
   memory estimate:  10.89 MiB
   allocs estimate:  282
   --------------
-  minimum time:     88.243 ms (0.00% GC)
-  median time:      95.848 ms (0.00% GC)
-  mean time:        95.378 ms (0.08% GC)
-  maximum time:     101.183 ms (0.00% GC)
+  minimum time:     90.217 ms (0.00% GC)
+  median time:      97.973 ms (0.00% GC)
+  mean time:        97.578 ms (0.08% GC)
+  maximum time:     104.437 ms (0.00% GC)
   --------------
   samples:          100
   evals/sample:     1
@@ -61,10 +62,10 @@ BenchmarkTools.Trial:
   memory estimate:  22.04 MiB
   allocs estimate:  27
   --------------
-  minimum time:     62.544 ms (0.00% GC)
-  median time:      64.649 ms (0.00% GC)
-  mean time:        65.266 ms (0.25% GC)
-  maximum time:     77.742 ms (1.20% GC)
+  minimum time:     65.171 ms (0.00% GC)
+  median time:      67.563 ms (0.00% GC)
+  mean time:        67.809 ms (0.25% GC)
+  maximum time:     71.476 ms (0.00% GC)
   --------------
   samples:          100
   evals/sample:     1
@@ -74,36 +75,36 @@ BenchmarkTools.Trial:
   memory estimate:  28.73 MiB
   allocs estimate:  41
   --------------
-  minimum time:     75.326 ms (0.00% GC)
-  median time:      78.218 ms (0.00% GC)
-  mean time:        79.269 ms (0.33% GC)
-  maximum time:     89.210 ms (0.00% GC)
+  minimum time:     80.934 ms (0.00% GC)
+  median time:      85.064 ms (0.00% GC)
+  mean time:        85.021 ms (0.26% GC)
+  maximum time:     89.538 ms (1.07% GC)
   --------------
   samples:          100
   evals/sample:     1
 
 core_number
 BenchmarkTools.Trial: 
-  memory estimate:  194.68 MiB
-  allocs estimate:  2710236
+  memory estimate:  16.73 MiB
+  allocs estimate:  13
   --------------
-  minimum time:     684.659 ms (1.51% GC)
-  median time:      732.921 ms (4.27% GC)
-  mean time:        733.795 ms (3.42% GC)
-  maximum time:     773.290 ms (4.19% GC)
+  minimum time:     550.673 ms (0.00% GC)
+  median time:      570.655 ms (0.00% GC)
+  mean time:        570.730 ms (0.02% GC)
+  maximum time:     595.601 ms (0.00% GC)
   --------------
   samples:          100
   evals/sample:     1
 
 core_number: threaded
 BenchmarkTools.Trial: 
-  memory estimate:  234.04 MiB
-  allocs estimate:  3837279
+  memory estimate:  58.67 MiB
+  allocs estimate:  1124989
   --------------
-  minimum time:     888.538 ms (3.82% GC)
-  median time:      945.867 ms (7.23% GC)
-  mean time:        946.615 ms (6.87% GC)
-  maximum time:     1.000 s (7.80% GC)
+  minimum time:     572.747 ms (0.00% GC)
+  median time:      623.610 ms (0.00% GC)
+  mean time:        619.195 ms (0.48% GC)
+  maximum time:     667.824 ms (0.67% GC)
   --------------
   samples:          100
   evals/sample:     1
@@ -113,10 +114,10 @@ BenchmarkTools.Trial:
   memory estimate:  64.92 MiB
   allocs estimate:  752410
   --------------
-  minimum time:     274.671 ms (0.00% GC)
-  median time:      293.358 ms (0.00% GC)
-  mean time:        295.197 ms (3.89% GC)
-  maximum time:     331.122 ms (9.01% GC)
+  minimum time:     283.238 ms (0.00% GC)
+  median time:      309.537 ms (0.00% GC)
+  mean time:        308.633 ms (3.76% GC)
+  maximum time:     348.225 ms (11.81% GC)
   --------------
   samples:          100
   evals/sample:     1

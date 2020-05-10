@@ -2,39 +2,39 @@ Profiling dataset data/pokec.txt
 Profiling loading
 =================
 
-Function: read_edgelist(filename, delimiter="	")
+Function: read_edgelist(filename, delimiter="	", nodetype=int, create_using=nx.DiGraph())
   --------------
-  Min:      147.44500270499702
-  Median:   147.44500270499702
-  Mean:     147.44500270499702
+  Min:      140.1886992990003
+  Median:   140.1886992990003
+  Mean:     140.1886992990003
   Stdev:    N.A.
-  Max:      147.44500270499702
+  Max:      140.1886992990003
   --------------
   samples:  1
 
 Profiling 2-hops
 ================
 
-Function: single_source_shortest_path_length(g, "1", cutoff=2)
+Function: single_source_shortest_path_length(g, 1, cutoff=2)
   --------------
-  Min:      0.027619208998657996
-  Median:   0.027619208998657996
-  Mean:     0.027619208998657996
+  Min:      0.005437900001197704
+  Median:   0.005437900001197704
+  Mean:     0.005437900001197704
   Stdev:    N.A.
-  Max:      0.027619208998657996
+  Max:      0.005437900001197704
   --------------
   samples:  1
 
 Profiling shortest path
 =======================
 
-Function: shortest_path_length(g, "1")
+Function: shortest_path_length(g, 1)
   --------------
-  Min:      68.24613371000305
-  Median:   68.24613371000305
-  Mean:     68.24613371000305
+  Min:      35.65160254699913
+  Median:   35.65160254699913
+  Mean:     35.65160254699913
   Stdev:    N.A.
-  Max:      68.24613371000305
+  Max:      35.65160254699913
   --------------
   samples:  1
 
@@ -43,11 +43,11 @@ Profiling PageRank
 
 Function: pagerank(g, alpha=0.85, tol=1e-3, max_iter=10000000)
   --------------
-  Min:      419.86768591299915
-  Median:   419.86768591299915
-  Mean:     419.86768591299915
+  Min:      239.74999683900023
+  Median:   239.74999683900023
+  Mean:     239.74999683900023
   Stdev:    N.A.
-  Max:      419.86768591299915
+  Max:      239.74999683900023
   --------------
   samples:  1
 
@@ -56,11 +56,11 @@ Profiling k-core
 
 Function: core.core_number(g)
   --------------
-  Min:      627.3589259510009
-  Median:   627.3589259510009
-  Mean:     627.3589259510009
+  Min:      296.26309548899917
+  Median:   296.26309548899917
+  Mean:     296.26309548899917
   Stdev:    N.A.
-  Max:      627.3589259510009
+  Max:      296.26309548899917
   --------------
   samples:  1
 
@@ -69,11 +69,11 @@ Profiling strongly connected components
 
 Function: [i for i in strongly_connected_components(g)]
   --------------
-  Min:      99.7114305460018
-  Median:   99.7114305460018
-  Mean:     99.7114305460018
+  Min:      61.74326289199962
+  Median:   61.74326289199962
+  Mean:     61.74326289199962
   Stdev:    N.A.
-  Max:      99.7114305460018
+  Max:      61.74326289199962
   --------------
   samples:  1
 

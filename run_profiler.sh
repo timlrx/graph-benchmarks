@@ -32,7 +32,7 @@ elif [[ $CODE == *"networkx"* ]]; then
     python $CODE $INPUT $N > $OUTPUT
 elif [[ $CODE == *"lightgraphs"* ]]; then
     echo profiling lightgraphs on $2...
-    julia $CODE $INPUT $N > $OUTPUT
+    JULIA_NUM_THREADS=16 julia --depwarn=no $CODE $INPUT $N > $OUTPUT
 else
     echo "Unknown code"
 fi

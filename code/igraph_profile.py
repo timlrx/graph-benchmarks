@@ -36,4 +36,4 @@ print("Profiling strongly connected components")
 print("=======================================")
 print()
 
-benchmark("g.components(mode=STRONG)", globals=globals(), n=n)
+benchmark("[i for i in g.components(mode=STRONG)]", globals=globals(), n=n)

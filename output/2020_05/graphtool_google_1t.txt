@@ -4,78 +4,78 @@ using 1 threads
 Profiling loading
 =================
 
-Function: load_graph_from_csv(filename, directed=False, csv_options={'delimiter': '	', 'quotechar': '"'})
+Function: load_graph_from_csv(filename, directed=True, csv_options={'delimiter': '	', 'quotechar': '"'})
   --------------
-  Min:      11.088767021999956
-  Median:   11.294747579499926
-  Mean:     11.274354399760005
-  Stdev:    0.10759983447119016
-  Max:      11.528486715000327
+  Min:      11.10778337100055
+  Median:   11.179455159499412
+  Mean:     11.19790757746985
+  Stdev:    0.07347021476862667
+  Max:      11.505892106000829
   --------------
   samples:  100
 
 Profiling 2-hops
 ================
 
-Function: shortest_distance(g, g.vertex(0), max_dist=2)
+Function: shortest_distance(g, g.vertex(0), max_dist=2).a
   --------------
-  Min:      0.004222624999783875
-  Median:   0.004471446499792364
-  Mean:     0.004802267920003942
-  Stdev:    0.002671878821314633
-  Max:      0.031122509999477188
+  Min:      0.003411403002246516
+  Median:   0.0034741385006782366
+  Mean:     0.0037350588198751212
+  Stdev:    0.002416194781138339
+  Max:      0.027635931997792795
   --------------
   samples:  100
 
 Profiling shortest path
 =======================
 
-Function: shortest_distance(g, g.vertex(0))
+Function: shortest_distance(g, g.vertex(0)).a
   --------------
-  Min:      0.14835107300041273
-  Median:   0.1580672885002059
-  Mean:     0.15761654190005175
-  Stdev:    0.0038373906570697757
-  Max:      0.16700441900047736
+  Min:      0.08380748200215749
+  Median:   0.08643105250121152
+  Mean:     0.08660903551004594
+  Stdev:    0.001473375108848185
+  Max:      0.09462831999917398
   --------------
   samples:  100
 
 Profiling PageRank
 ==================
 
-Function: pagerank(g, damping=0.85, epsilon=1e-3, max_iter=10000000)
+Function: pagerank(g, damping=0.85, epsilon=1e-3, max_iter=10000000).a
   --------------
-  Min:      2.7758981570004835
-  Median:   2.9315716944997803
-  Mean:     2.931119951810042
-  Stdev:    0.05752418440365586
-  Max:      3.0408756859997084
+  Min:      1.418032082998252
+  Median:   1.4568618920002336
+  Mean:     1.4584043193599427
+  Stdev:    0.01426686031679399
+  Max:      1.4932974980001745
   --------------
   samples:  100
 
 Profiling k-core
 ================
 
-Function: kcore_decomposition(g)
+Function: kcore_decomposition(g).a
   --------------
-  Min:      0.4360403809996569
-  Median:   0.465790999499859
-  Mean:     0.4665952375499728
-  Stdev:    0.01230004952480799
-  Max:      0.4972343749996071
+  Min:      0.40502496100089047
+  Median:   0.41782389399850217
+  Mean:     0.41846134132025326
+  Stdev:    0.006640468811604183
+  Max:      0.4458848720023525
   --------------
   samples:  100
 
 Profiling strongly connected components
 =======================================
 
-Function: label_components(g, vprop=None, directed=None, attractors=False)
+Function: cc, _ = label_components(g, vprop=None, directed=True, attractors=False); cc.a
   --------------
-  Min:      0.22249169899987464
-  Median:   0.2291614805003519
-  Mean:     0.23040820833003636
-  Stdev:    0.0050457230475266825
-  Max:      0.24763634400005685
+  Min:      0.27881226899989997
+  Median:   0.28724704600244877
+  Mean:     0.2874213112799407
+  Stdev:    0.004077605132037939
+  Max:      0.3016988129966194
   --------------
   samples:  100
 

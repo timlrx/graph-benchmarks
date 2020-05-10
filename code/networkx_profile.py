@@ -16,22 +16,23 @@ print("Profiling loading")
 print("=================")
 print()
 
-benchmark('read_edgelist(filename, delimiter="\t")', globals=globals(), n=n)
-g = read_edgelist(filename, delimiter="\t")
-g = g.to_directed()
+benchmark('read_edgelist(filename, delimiter="\t", nodetype=int, create_using=nx.DiGraph())',
+          globals=globals(), n=n)
+g = read_edgelist(filename, delimiter="\t", nodetype=int,
+                  create_using=nx.DiGraph())
 
 print("Profiling 2-hops")
 print("================")
 print()
 
 benchmark(
-    f'single_source_shortest_path_length(g, "{nodeid}", cutoff=2)', globals=globals(), n=n)
+    f'single_source_shortest_path_length(g, {nodeid}, cutoff=2)', globals=globals(), n=n)
 
 print("Profiling shortest path")
 print("=======================")
 print()
 
-benchmark(f'shortest_path_length(g, "{nodeid}")', globals=globals(), n=n)
+benchmark(f'shortest_path_length(g, {nodeid})', globals=globals(), n=n)
 
 print("Profiling PageRank")
 print("==================")
