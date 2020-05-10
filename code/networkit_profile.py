@@ -13,7 +13,7 @@ else:
     nodeid = 0
 
 print(f"Profiling dataset {filename}")
-print(f"using {nk.getCurrentNumberOfThreads()} threads")
+print(f"using {nk.getMaxNumberOfThreads()} threads")
 
 print("Profiling loading")
 print("=================")
