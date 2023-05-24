@@ -2,10 +2,10 @@
 
 A comparison of 5 different packages:
 
-- [NetworkX](https://networkx.github.io/), v2.4, Python 3.8
-- [graph-tool](https://graph-tool.skewed.de/static/doc/quickstart.html), v2.31, Python 3.8
-- [Igraph](https://igraph.org/python/), v0.8.2, Python 3.8
-- [NetworKit](https://networkit.github.io/), v6.1.0, Python 3.8
+- [NetworkX](https://networkx.github.io/), v3.1, Python 3.10
+- [graph-tool](https://graph-tool.skewed.de/static/doc/quickstart.html), v2.55, Python 3.10
+- [Igraph](https://igraph.org/python/), v0.10.3, Python 3.10
+- [NetworKit](https://networkit.github.io/), v10.1, Python 3.10
 - [SNAP](https://snap.stanford.edu/snap/), v5.0.0, Python 3.7
 - [LightGraphs](https://juliagraphs.github.io/LightGraphs.jl/latest/), v2.0-dev, Julia 1.4
 
